@@ -1,0 +1,9 @@
+.menu_div{
+    display: flex;
+    padding: 0.1rem;
+    color: white;
+    background-color: black;
+}
+.menu_div > div{
+    margin: 1rem;
+}
