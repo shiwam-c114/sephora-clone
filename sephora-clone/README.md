@@ -68,3 +68,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+{
+            "product_id":"s2572279",
+            "product-title":"HAUS LABS BY LADY GAGA",
+            "product-desc":"Hy-Power Eye, Cheek & Lip Pigment Paint",
+            "price":24,
+            "product_images":["https://www.sephora.com/productimages/sku/s2572279-main-zoom.jpg?imwidth=270&pb=2020-03-sephora-clean-2019&imwidth=230",
+                              "https://www.sephora.com/productimages/sku/s2572279-main-zoom.jpg?imwidth=48",
+                              "https://www.sephora.com/productimages/sku/s2572279-av-1-zoom.jpg?imwidth=315",
+                              "https://www.sephora.com/contentimages/VideoImagePXM/HL_PigmentPaint_PrimaryVideo-thumbnail.png",
+                              "https://www.sephora.com/productimages/sku/s2572279-av-2-zoom.jpg?imwidth=315",
+                              "https://www.sephora.com/productimages/sku/s2572279-av-7-zoom.jpg?imwidth=315",
+                              "https://www.sephora.com/productimages/sku/s2572279-av-4-zoom.jpg?imwidth=315",
+                              "https://www.sephora.com/productimages/sku/s2572279-av-8-zoom.jpg?imwidth=315",
+                              "https://www.sephora.com/productimages/sku/s2572279-av-6-zoom.jpg?imwidth=315",
+                              "https://www.sephora.com/contentimages/VideoImagePXM/HL_PigmentPaint_SecondaryVideo_ArmSwatch-thumbnail.png"],
+            "color":"Blush Matte -muted peach",
+            "size" :"0.25 oz / 7g",
+            "rating":4.2,
+            "rated":192
+        },
