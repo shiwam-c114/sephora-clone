@@ -44,7 +44,7 @@ import {Box,
             <Box className={makeupstyles.leftContainer}>
                 <h1 style={{fontSize:"30px",
                             fontWeight:"600",
-                            marginLeft:"30px"
+                            marginLeft:"35px"
                     }}>Makeup</h1>
                 <UnorderedList className={makeupstyles.typeContainer}>
                     <ListItem>Face(807)</ListItem>
@@ -59,14 +59,14 @@ import {Box,
                     <ListItem>Vegan (606)</ListItem>
                     <ListItem>Mini Size (279)</ListItem>
                 </UnorderedList>
-                <h3 style={{marginLeft:"30px"}} >Filters</h3>
-                <Box className={makeupstyles.filterContainer}>
-                    <Accordion defaultIndex={[0]} allowMultiple allowToggle width="300px" padding="20px">
+                <h3 style={{paddingLeft:"35px", fontWeight:"600", color:"grey",marginBottom:"-10px", marginTop:"40px"}} >Filters</h3>
+                <Box className={makeupstyles.filterContainer} padding="20px">
+                    <Accordion defaultIndex={[0]} allowMultiple allowToggle width="250px" padding="0px">
                     <AccordionItem>
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Pickup & Delivery
+                            <h4 className={makeupstyles.filterHeading}>Pickup & Delivery</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -83,7 +83,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            New
+                            <h4 className={makeupstyles.filterHeading}>New</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -96,7 +96,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left' fontWeight="600">
-                            Rating
+                            <h4 className={makeupstyles.filterHeading}>Rating</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -112,7 +112,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            New
+                            <h4 className={makeupstyles.filterHeading}>Brand</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -134,7 +134,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Concerns
+                            <h4 className={makeupstyles.filterHeading}>Concerns</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -156,7 +156,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Sale
+                            <h4 className={makeupstyles.filterHeading}>Sale</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -169,7 +169,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Ingredient Preferences
+                            <h4 className={makeupstyles.filterHeading}>Ingredient Preferences</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -192,7 +192,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Finish
+                            <h4 className={makeupstyles.filterHeading}>Finish</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -214,7 +214,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Benefits
+                            <h4 className={makeupstyles.filterHeading}>Benefits</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -228,7 +228,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Formulation
+                            <h4 className={makeupstyles.filterHeading}>Formulation</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -242,7 +242,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Color Family
+                            <h4 className={makeupstyles.filterHeading}>Color Family</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -256,7 +256,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Shopping Preferences
+                            <h4 className={makeupstyles.filterHeading}>Shopping Preferences</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -270,7 +270,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Skin Type
+                            <h4 className={makeupstyles.filterHeading}>Skin Type</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -284,7 +284,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Coverage
+                            <h4 className={makeupstyles.filterHeading}>Coverage</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -298,7 +298,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                        Size
+                            <h4 className={makeupstyles.filterHeading}>Size</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -312,7 +312,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Age Range
+                            <h4 className={makeupstyles.filterHeading}>Age Range</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -326,7 +326,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Volume
+                            <h4 className={makeupstyles.filterHeading}>Volume</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -340,7 +340,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Price Range
+                            <h4 className={makeupstyles.filterHeading}>Price Range</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -353,7 +353,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Bristle Type
+                            <h4 className={makeupstyles.filterHeading}>Bristle Type</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -367,7 +367,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Sun Protection
+                            <h4 className={makeupstyles.filterHeading}>Sun Protections</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -381,21 +381,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Finish
-                            </Box>
-                            <AccordionIcon />
-                        </AccordionButton>
-                        </h2>
-                        <AccordionPanel pb={4}>
-                            <Checkbox>Matte (444)</Checkbox>
-                            
-                        </AccordionPanel>
-                    </AccordionItem>
-                    <AccordionItem>
-                        <h2>
-                        <AccordionButton>
-                            <Box flex='1' textAlign='left'>
-                            Type
+                            <h4 className={makeupstyles.filterHeading}>Type</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -409,7 +395,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Frangrance Family
+                            <h4 className={makeupstyles.filterHeading}>Frangrance Family</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -423,7 +409,7 @@ import {Box,
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Frangrance Type
+                            <h4 className={makeupstyles.filterHeading}>Frangrance Type</h4>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
@@ -456,9 +442,9 @@ import {Box,
                         data.map((item)=>
                         ( 
                            <div>
-                            <div style={{display:"flex" ,justifyContent:"space-between"}}>
-                                {item.currentSku.isNew?<img width="15px"  src="https://img.icons8.com/material/344/new--v1.png" alt="" />:<img width="15px" height="20px" src="https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png" alt="" />}
-                                <img  width="20px" height="20px" src="https://cdn-icons-png.flaticon.com/512/812/812327.png" alt="" />
+                            <div style={{display:"flex" ,justifyContent:"space-between",height:"25px",width:"90%"}}>
+                                {item.currentSku.isNew?<img width="35px"  src="https://img.icons8.com/material/344/new--v1.png" alt="" />:<img width="35px" height="20px" src="https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png" alt="" />}
+                                <img  width="20px" height="5px" src="https://cdn-icons-png.flaticon.com/512/812/812327.png" alt="" />
                             </div>
                             <img src={item.heroImage} alt="" /> 
                             <h5 style={{fontSize:"15px" , fontWeight:"650"}}>{item.brandName}</h5>

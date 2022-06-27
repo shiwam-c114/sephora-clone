@@ -8,23 +8,29 @@
 .leftContainer
 {
     width:20%;
-   
     height:100%;
     
 }
 .filterContainer
 {
-    font-weight:600;
+    font-weight:400;
+    text-align: left;
+}
+.filterHeading
+{
+    font-weight: 650;
+    text-align: left;
+
 }
 .typeContainer
 {
- width: 100%;
+    width: 100%;
 }
 .typeContainer >li
 {
     list-style: none;
-    margin: 15px;
     cursor: pointer;
+    margin: 10px 0px 10px 20px;
 }
 .typeContainer >li:hover
 {
