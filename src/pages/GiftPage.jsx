@@ -8,19 +8,16 @@ import {Box,
 } from "@chakra-ui/react"
 import makeupstyles from "./Styles/Makeup.module.css";
 
-export const MakeupPage=()=>
+export const GiftPage=()=>
 {
-   const type=["Face(807)",
-                "Eye(884)",
-                "Lip(502)",
-                "Cheek(237)",
-                "Value & Gift Sets(283)",
-                "Makeup Palettes(186)",
-                "Brushes & Applicators(244)",
-                "Accessories (93)",
-                "Nail (56)",
-                "Vegan (606)",
-                "Mini Size (279)"
+   const type=["Value & Gift Sets (305)",
+                "By Price (663)",
+                "By Category (686)",
+                "By Recipient (691)",
+                "Bestseller (118)",
+                "Only at Sephora (158)",
+                "Luxury Beauty (891)",
+                
               ];
     const filters=[
                     {
@@ -37,46 +34,46 @@ export const MakeupPage=()=>
                     },
                     {
                         "title":"Brand",
-                        "filterOptions":["HAUS LABS BY LADY GAGA (7)",
-                                         "MAKE UP FOR EVER (71)",
-                                         "DANESSA MYRICKS BEAUTY",
-                                         "SEPHORA COLLECTION(226)",
-                                         "Too Faced (59)",
-                                         "The Ordinary (3)",
-                                         "NARS(55)",
-                                         "Fenty Beauty by Rihanna (73)",
-                                         "LANEIGE(4)",
-                                         "Bite Beauty (13)"]
+                        "filterOptions":["Sephora Favorites",
+                                         "Supergoop",
+                                         "Sol de Janeio",
+                                         "LANEIGE",
+                                         "SEPHORA COLLECTION",
+                                         "Blossance",
+                                         "GUERLAIN",
+                                         "Joise Maran",
+                                         "Dr. Dennis Gross Skincare",
+                                         "Shiseido"]
                     },
                     {
                         "title":"Concerns",
-                        "filterOptions":["Dullness / Uneven tecture (111)",
-                                        "Uneven skin tone (81)",
-                                        "Redness(79)",
-                                        "Dark Spots (64)",
-                                        "Acne/ Blemishes(53)",
-                                        "Dark circles(52)",
-                                        "Fine-lines/ Wrinkles (65)",
-                                        "Anti-aging (50)",
-                                        "Volumizing (5)"
+                        "filterOptions":["Dullness / Uneven tecture",
+                                        "Uneven skin tone",
+                                        "Redness",
+                                        "Dark Spots",
+                                        "Acne/ Blemishes",
+                                        "Dark circles",
+                                        "Fine-lines/ Wrinkles",
+                                        "Anti-aging",
+                                        "Volumizing"
                                         ]
                     },
                     {
                         "title":"Sale",
-                        "filterOptions":["Sale (131)"]
+                        "filterOptions":["Sale"]
                     },
                     {
                         "title":"Ingredient Preferences",
-                        "filterOptions":["Vegan (1288)",
-                                         "Cruelty-free (729)",
-                                         "Fragrance Free (508)",
-                                         "Clean at Sephora(434)",
-                                         "Hyaluronic Acid (220)",
-                                         "Peptides (91)",
-                                         "Parben-free (1307)",
-                                         "Sulfate-free (636)",
-                                         "Antioxidants (269)",
-                                         "Minerals (50)",
+                        "filterOptions":["Vegan",
+                                         "Clean Planet Positive",
+                                         "Paraben-Free",
+                                         "Clean at Sephora",
+                                         "AHA/ Glycolic Acid",
+                                         "Salicylic Acid",
+                                         "Oil-free",
+                                         "Sulfate-free",
+                                         "Antioxidants",
+                                         "Vitamin C",
                                         ]
                     },
                     {
@@ -109,16 +106,16 @@ export const MakeupPage=()=>
                     },
                     {
                         "title":"Formulation",
-                        "filterOptions":["Pencil (107)",
-                                         "Liquid (480)",
-                                         "Cream (169)",
-                                         "Stick (190)",
-                                         "Serum (36)",
-                                         "Rollerball (17)",
-                                         "Mask (3)",
-                                         "Balm (52)",
-                                         "Pressed powder (356)",
-                                         "Gel (84)",
+                        "filterOptions":["Cream",
+                                         "Wipes",
+                                         "Mask",
+                                         "Oil",
+                                         "Liquid",
+                                         "Rollerball",
+                                         "Pressed Powder",
+                                         "Balm",
+                                         "Stick",
+                                         "Gel",
                                         ]
                     },
                     {
@@ -137,23 +134,24 @@ export const MakeupPage=()=>
                     },
                     {
                         "title":"Shopping Preferences",
-                        "filterOptions":["BIPOC-Owned Brands (175)",
-                                         "Black-Owned Brands (121)",
-                                         "Only at Sephora (202)",
-                                         "Best of Allure (40)",
-                                         "Luxury Makeup (314)",
-                                         "Luxury Beauty (7)",
-                                         "Luxury SKincare (24)",
-                                         "Luxury Frangrance (1)",
+                        "filterOptions":["BIPOC-Owned Brands",
+                                         "Black-Owned Brands",
+                                         "Only at Sephora",
+                                         "Best of Allure",
+                                         "Luxury Makeup",
+                                         "Luxury Beauty",
+                                         "Luxury SKincare",
+                                         "Luxury Frangrance",
+                                         "Luxury Hair"
                                         ]
                     },
                     {
                         "title":"Skin Type",
-                        "filterOptions":["Combination (717)",
-                                         "Normal (708) ",
-                                         "Oily (672)",
-                                         "Dry (659)",
-                                         "Sensitive (111)",
+                        "filterOptions":["Combination",
+                                         "Normal ",
+                                         "Oily",
+                                         "Dry",
+                                         "Sensitive",
                                       
                                         ]
                     },
@@ -252,7 +250,7 @@ export const MakeupPage=()=>
         <>
             <Box className={makeupstyles.container}>
                 <Box className={makeupstyles.leftContainer}>
-                    <h1 className={makeupstyles.pageHeading}>Makeup</h1>
+                    <h1 className={makeupstyles.pageHeading}>Gifts</h1>
                     <ProductType type={type}/>
                     <h3 style={{paddingLeft:"35px", fontWeight:"600", color:"grey",marginBottom:"-10px", marginTop:"40px"}} >Filters</h3>
                     <ProductFilters filters={filters}/>
@@ -260,18 +258,19 @@ export const MakeupPage=()=>
                 <Box className={makeupstyles.rightContainer}>
                     <Box>
                         <UnorderedList className={makeupstyles.categoryContainer} display="grid" gridTemplateColumns="repeat(5,1fr)">
-                            <ListItem>New <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/new.svg" alt="" /></ListItem>
+                            <ListItem>Gift Cards <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/gift_cards.svg" alt="" /></ListItem>
+                            <ListItem>Gift Finder<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/foundation_quiz.svg" alt="" /></ListItem>
                             <ListItem>Bestsellers <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/bestsellers.svg" alt="" /></ListItem>
                             <ListItem >Clean <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/clean_beauty32.svg" alt="" /></ListItem>
                             <ListItem >Vegan <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/Icon_Vegan.svg" alt="" /></ListItem>
                             <ListItem>Mini Size <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/minis.svg" alt="" /></ListItem>
                             <ListItem>Lip Quiz <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/lip_quiz.svg" alt="" /></ListItem>
                             <ListItem>Cruelty-Free <img src="https://www.sephora.com/contentimages/meganav/icons/crueltyfree.svg" alt="" /></ListItem>
-                            <ListItem>Foundation Quiz <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/foundation_quiz.svg" alt="" /></ListItem>
+                            
                         </UnorderedList>
                     </Box>
                     <Box className={makeupstyles.productsContainer}>
-                    <ProductList title={"makeup"}/>
+                    <ProductList title={"gifts"}/>
 
                     </Box>
                 </Box>

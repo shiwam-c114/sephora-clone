@@ -8,19 +8,22 @@ import {Box,
 } from "@chakra-ui/react"
 import makeupstyles from "./Styles/Makeup.module.css";
 
-export const MakeupPage=()=>
+export const Skincare=()=>
 {
-   const type=["Face(807)",
-                "Eye(884)",
-                "Lip(502)",
-                "Cheek(237)",
-                "Value & Gift Sets(283)",
-                "Makeup Palettes(186)",
-                "Brushes & Applicators(244)",
-                "Accessories (93)",
-                "Nail (56)",
-                "Vegan (606)",
-                "Mini Size (279)"
+   const type=["Moisturizers (686)",
+                "Cleansers (412)",
+                "Treatments (538)",
+                "Masks (197)",
+                "Eye Care (193)",
+                "Lip Balms & Treatments (151)",
+                "Sunscreen( 185)",
+                "Self Tanners(68)",
+                "High Tech Tools (104)",
+                "Wellness(150)",
+                "Shop by Concerns (525)",
+                "Vegan (782)",
+                "Value & Gift Sets (229)",
+                "Mini Size (216)"
               ];
     const filters=[
                     {
@@ -252,7 +255,7 @@ export const MakeupPage=()=>
         <>
             <Box className={makeupstyles.container}>
                 <Box className={makeupstyles.leftContainer}>
-                    <h1 className={makeupstyles.pageHeading}>Makeup</h1>
+                    <h1 className={makeupstyles.pageHeading}>Skincare</h1>
                     <ProductType type={type}/>
                     <h3 style={{paddingLeft:"35px", fontWeight:"600", color:"grey",marginBottom:"-10px", marginTop:"40px"}} >Filters</h3>
                     <ProductFilters filters={filters}/>
@@ -265,13 +268,15 @@ export const MakeupPage=()=>
                             <ListItem >Clean <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/clean_beauty32.svg" alt="" /></ListItem>
                             <ListItem >Vegan <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/Icon_Vegan.svg" alt="" /></ListItem>
                             <ListItem>Mini Size <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/minis.svg" alt="" /></ListItem>
-                            <ListItem>Lip Quiz <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/lip_quiz.svg" alt="" /></ListItem>
-                            <ListItem>Cruelty-Free <img src="https://www.sephora.com/contentimages/meganav/icons/crueltyfree.svg" alt="" /></ListItem>
-                            <ListItem>Foundation Quiz <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/foundation_quiz.svg" alt="" /></ListItem>
+                            <ListItem>Sephora Collection<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/sephoracollection.svg" alt="" /></ListItem>
+                            <ListItem>Skincare Quiz<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/skincare_quiz.svg" alt="" /></ListItem>
+                            <ListItem>Skin Routine Quiz <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/skincare_age.svg" alt="" /></ListItem>
+                            <ListItem>Best Skincare Under $35<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/under_35.svg" alt="" /></ListItem>
+                            <ListItem>Clean Skincare Guide<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/clean_guide.svg" alt="" /></ListItem>
                         </UnorderedList>
                     </Box>
                     <Box className={makeupstyles.productsContainer}>
-                    <ProductList title={"makeup"}/>
+                    <ProductList title={"skincare"}/>
 
                     </Box>
                 </Box>

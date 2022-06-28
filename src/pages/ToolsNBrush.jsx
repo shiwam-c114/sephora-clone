@@ -8,19 +8,13 @@ import {Box,
 } from "@chakra-ui/react"
 import makeupstyles from "./Styles/Makeup.module.css";
 
-export const MakeupPage=()=>
+export const ToolsNBrush=()=>
 {
-   const type=["Face(807)",
-                "Eye(884)",
-                "Lip(502)",
-                "Cheek(237)",
-                "Value & Gift Sets(283)",
-                "Makeup Palettes(186)",
-                "Brushes & Applicators(244)",
-                "Accessories (93)",
-                "Nail (56)",
-                "Vegan (606)",
-                "Mini Size (279)"
+   const type=["Brushes & Applicators (240)",
+                "Hair Tools (158)",
+                "Beauty Tools (128)",
+                "Beauty Accessories (8)",
+                "Value & Gift Sets(13)",
               ];
     const filters=[
                     {
@@ -252,7 +246,7 @@ export const MakeupPage=()=>
         <>
             <Box className={makeupstyles.container}>
                 <Box className={makeupstyles.leftContainer}>
-                    <h1 className={makeupstyles.pageHeading}>Makeup</h1>
+                    <h1 className={makeupstyles.pageHeading}>Tools & Brushes</h1>
                     <ProductType type={type}/>
                     <h3 style={{paddingLeft:"35px", fontWeight:"600", color:"grey",marginBottom:"-10px", marginTop:"40px"}} >Filters</h3>
                     <ProductFilters filters={filters}/>
@@ -262,16 +256,13 @@ export const MakeupPage=()=>
                         <UnorderedList className={makeupstyles.categoryContainer} display="grid" gridTemplateColumns="repeat(5,1fr)">
                             <ListItem>New <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/new.svg" alt="" /></ListItem>
                             <ListItem>Bestsellers <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/bestsellers.svg" alt="" /></ListItem>
-                            <ListItem >Clean <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/clean_beauty32.svg" alt="" /></ListItem>
-                            <ListItem >Vegan <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/Icon_Vegan.svg" alt="" /></ListItem>
-                            <ListItem>Mini Size <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/minis.svg" alt="" /></ListItem>
-                            <ListItem>Lip Quiz <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/lip_quiz.svg" alt="" /></ListItem>
+                            <ListItem >Sephora Collection<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/sephoracollection.svg" alt="" /></ListItem>
+                            <ListItem>Allure Best of Beauty:Bath & Body<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/lip_quiz.svg" alt="" /></ListItem>
                             <ListItem>Cruelty-Free <img src="https://www.sephora.com/contentimages/meganav/icons/crueltyfree.svg" alt="" /></ListItem>
-                            <ListItem>Foundation Quiz <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/foundation_quiz.svg" alt="" /></ListItem>
                         </UnorderedList>
                     </Box>
                     <Box className={makeupstyles.productsContainer}>
-                    <ProductList title={"makeup"}/>
+                    <ProductList title={"toolsNBrushes"}/>
 
                     </Box>
                 </Box>
