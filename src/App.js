@@ -6,8 +6,10 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
  import { ChakraProvider } from '@chakra-ui/react';
 function App() {
   return (
-    <ChakraProvider>  <BrowserRouter>
+    <ChakraProvider>
+    <BrowserRouter>
     <Routes>
+    
 <Route path='/' element={<One/>} />
 <Route path='/next' element={<Two/>} />
 <Route path='/pay' element={<Pay/>} />
