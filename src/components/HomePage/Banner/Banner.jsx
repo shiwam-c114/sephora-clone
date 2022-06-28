@@ -13,9 +13,9 @@ const images = [
 ];
 const Banner = () => {
   return (
-    <div >
+    <div>
     <SimpleImageSlider
-      width={500}
+      width={449.5}
       height={500}
       images={images}
       showNavs={true}
