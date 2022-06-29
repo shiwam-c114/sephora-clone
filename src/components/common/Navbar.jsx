@@ -1,8 +1,11 @@
 import React from 'react';
 import {Link} from "react-router-dom"
+import { AuthComponent } from '../Authentication/AuthComponent';
 
 function Navbar() {
   return (
+  <>
+    <AuthComponent/>
     <div style={{display:"flex", flexDirection:"row",gap:"20px", justifyContent:"space-evenly"}}>
       <Link to="/">Home</Link>
       <Link to="/makeup">Makeup</Link>
@@ -14,6 +17,7 @@ function Navbar() {
       <Link to="/hair">Hair</Link>
       <Link to="/skincare">Skincare</Link>
     </div>
+  </>
   )
 }
 
