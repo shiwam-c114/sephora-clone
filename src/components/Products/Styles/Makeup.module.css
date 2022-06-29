@@ -69,7 +69,18 @@
 {
     display: flex;
     flex-direction: row;
+    gap:5px;
+    font-weight: 600;
     justify-content: right;
+}
+.sortBtn
+{
+    font-weight: 600;
+}
+.sortBtn option :hover
+{
+    text-decoration: underline;
+    cursor: pointer;
 }
 .productsContainer
 {

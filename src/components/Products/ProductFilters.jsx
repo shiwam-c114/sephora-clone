@@ -15,7 +15,7 @@ export const ProductFilters=({filters})=>
         <Box className={makeupstyles.filterContainer} padding="20px">
         <Accordion  allowMultiple allowToggle width="250px" padding="0px">
             { filters?.map((item)=>(
-                <AccordionItem>
+                <AccordionItem key={item.title}>
                 <h2>
                 <AccordionButton>
                     <Box flex='1' textAlign='left'>
@@ -28,7 +28,7 @@ export const ProductFilters=({filters})=>
                 <UnorderedList display="flex" flexDirection="column">
                     {item.filterOptions?.map((option)=>
                     (
-                        <Checkbox>{option}</Checkbox>
+                        <Checkbox key={option}>{option}</Checkbox>
                     ))}
                     
                 </UnorderedList>

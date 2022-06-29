@@ -12,7 +12,7 @@ export const ProductType=({type})=>
     <UnorderedList className={makeupstyles.typeContainer}>
         { type?.map((item)=>
         (
-            <ListItem>{item}</ListItem>
+            <ListItem key={item}>{item}</ListItem>
         ))
          
         }

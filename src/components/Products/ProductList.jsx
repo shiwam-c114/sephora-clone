@@ -1,13 +1,14 @@
 import React from "react";
 import makeupstyles from "./Styles/Makeup.module.css";
-import ReactStars from "react-rating-stars-component";
+
+import StarRatings from 'react-star-ratings';
 import {Box} from "@chakra-ui/react";
 import  ProductListStyle  from "./Styles/ProductList.module.css";
 
 export const ProductList=({title})=>
 {  
     const [data,setData]=React.useState([]);
-    const [sortValue,setsortValue]=React.useState("");
+    
     const getData=()=>
     {
         fetch(`http://localhost:8080/${title}`)
@@ -25,7 +26,7 @@ export const ProductList=({title})=>
     const handleSort=(e)=>
     {
        let {value} =e.target;
-       let newData=data;
+       let newData=[...data];
        if(value==="toprated")
        {
          newData=data.sort((a,b)=>
@@ -33,25 +34,50 @@ export const ProductList=({title})=>
            
             return parseFloat(b.rating)-parseFloat(a.rating);
         })
-        
+            
        }
-       console.log("before",data)
+       else if(value==="lowtohigh")
+       {
+            newData=data.sort((a,b)=>
+            {
+                a=+(a.currentSku.listPrice.split(".")[0].slice(1));
+                
+                b=+(b.currentSku.listPrice.split(".")[0].slice(1));
+                return a-b;
+            })
+            
+       }
+       else if(value==="hightolow")
+       {
+            newData=data.sort((a,b)=>
+            {
+                a=+(a.currentSku.listPrice.split(".")[0].slice(1));
+                
+                b=+(b.currentSku.listPrice.split(".")[0].slice(1));
+                return b-a;
+            })
+            
+       }
+       else
+       {
+        getData();
+       }
        setData([...newData]);
-       console.log("after",data);
+       
     }
     React.useEffect(
         ()=>
         {
             getData();
-            console.log(data);
+            
         },[]
     )
 
     return(
         <>  <div className={makeupstyles.sortContainer}>
-                <label htmlFor="sortBtn">Sort</label>
+                <label htmlFor="sortBtn">Sort :</label>
                 <select name="sortBtn" onChange={(e)=>(handleSort(e))} className={makeupstyles.sortBtn}>
-                    <option value="relavance">Relavance</option>
+                    <option value="relavance">Relavance (Default)</option>
                     <option value="bestselling">Best Selling</option>
                     <option value="toprated">Top Rated</option>
                     <option value="lowtohigh">Price Low to High</option>
@@ -64,7 +90,9 @@ export const ProductList=({title})=>
                 
                 data.map((item)=>
                 ( 
-                   <div style={{cursor: "pointer"}}>
+                   <div 
+                   key={item.productId}
+                   style={{cursor: "pointer"}}>
                     <div className={ProductListStyle.badgeHolderParent}>
                         <div className={ProductListStyle.badgeHolder}>
                             {item.currentSku.isNew?
@@ -96,9 +124,17 @@ export const ProductList=({title})=>
                     <p style={{fontSize:"13px",fontWeight:"500" ,color:"grey"}}>{item.moreColors} colours</p>
                     <div style={{display:"flex",alignItems:"center",gap:"8px"}}>
                        
-                        <ReactStars  count={5} value={parseFloat(item.rating)}  isHalf size={20} activeColor="black" edit={false}/>
+                    <StarRatings
+                    rating={parseFloat(item.rating)}
+                    starRatedColor="black"
+                    numberOfStars={5}
+                    name='rating'
+                    starDimension="16px"
+                    starSpacing="1px"
+                    />
                         <p style={{marginTop:"3px",fontSize:"13px"}}>{item.reviews}</p>
                     </div>
+                    
                     <h3 style={{fontWeight:"700",fontSize:"18px"}}>{item.currentSku.listPrice}</h3>
                    </div>
                 ))
