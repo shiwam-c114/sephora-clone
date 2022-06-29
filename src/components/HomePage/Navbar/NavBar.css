@@ -1,7 +1,6 @@
 *{
-
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .search_input{
@@ -26,4 +25,22 @@
     align-items: center;
     padding-left: 10px;
 
+}
+.nav_right{
+    text-align: center;
+}
+.nav_right>div{
+    margin-left: 3rem;
+    justify-content: center;
+}
+.padding{
+    padding: 1rem;
+}
+.icon_div{
+    display: flex;
+    padding: 0px;
+}
+
+.icon_div svg{
+    width: 50px;
 }
