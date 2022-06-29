@@ -26,7 +26,7 @@ export const Fragrance=()=>
                     },
                     {
                         "title":"New",
-                        "filterOptions":["New(171)"]
+                        "filterOptions":["New"]
                     },
                     {
                         "title":"Rating",
@@ -245,36 +245,36 @@ export const Fragrance=()=>
     
                 
 
-    return(
-        <>
-            <Box className={makeupstyles.container}>
-                <Box className={makeupstyles.leftContainer}>
-                    <h1 className={makeupstyles.pageHeading}>Fragrance</h1>
-                    <ProductType type={type}/>
-                    <h3 style={{paddingLeft:"35px", fontWeight:"600", color:"grey",marginBottom:"-10px", marginTop:"40px"}} >Filters</h3>
-                    <ProductFilters filters={filters}/>
-                </Box>
-                <Box className={makeupstyles.rightContainer}>
-                    <Box>
-                        <UnorderedList className={makeupstyles.categoryContainer} display="grid" gridTemplateColumns="repeat(5,1fr)">
-                            <ListItem>New <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/new.svg" alt="" /></ListItem>
-                            <ListItem>Bestsellers <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/bestsellers.svg" alt="" /></ListItem>
-                            <ListItem >Clean <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/clean_beauty32.svg" alt="" /></ListItem>
-                            <ListItem>Cruelty-Free <img src="https://www.sephora.com/contentimages/meganav/icons/crueltyfree.svg" alt="" /></ListItem>
-                            <ListItem>Mini Size <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/minis.svg" alt="" /></ListItem>
-                            <ListItem >Fragrance Quiz <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/fragrance_quiz.svg" alt="" /></ListItem>
-                            <ListItem>Clean Fragrance Guide<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/clean_guide.svg" alt="" /></ListItem>
-                            <ListItem>Fragrance Notes Guide <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/fragrances_guide.svg" alt="" /></ListItem>
-                            <ListItem>Niche Fragrances<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/niche_fragrances.svg" alt="" /></ListItem>
-                            <ListItem>Best Perfume $45 and Under<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/under_45.svg" alt="" /></ListItem>
-                        </UnorderedList>
-                    </Box>
-                    
-                    <ProductList title={"fragrance"}/>
-
-       
-                </Box>
+return(
+<>
+    <Box className={makeupstyles.container}>
+        <Box className={makeupstyles.leftContainer}>
+            <h1 className={makeupstyles.pageHeading}>Fragrance</h1>
+            <ProductType type={type}/>
+            <h3 style={{paddingLeft:"35px", fontWeight:"600", color:"grey",marginBottom:"-10px", marginTop:"40px"}} >Filters</h3>
+            <ProductFilters filters={filters}/>
+        </Box>
+        <Box className={makeupstyles.rightContainer}>
+            <Box>
+                <UnorderedList className={makeupstyles.categoryContainer} display="grid" gridTemplateColumns="repeat(5,1fr)">
+                    <ListItem>New <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/new.svg" alt="" /></ListItem>
+                    <ListItem>Bestsellers <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/bestsellers.svg" alt="" /></ListItem>
+                    <ListItem >Clean <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/clean_beauty32.svg" alt="" /></ListItem>
+                    <ListItem>Cruelty-Free <img src="https://www.sephora.com/contentimages/meganav/icons/crueltyfree.svg" alt="" /></ListItem>
+                    <ListItem>Mini Size <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/minis.svg" alt="" /></ListItem>
+                    <ListItem >Fragrance Quiz <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/fragrance_quiz.svg" alt="" /></ListItem>
+                    <ListItem>Clean Fragrance Guide<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/clean_guide.svg" alt="" /></ListItem>
+                    <ListItem>Fragrance Notes Guide <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/fragrances_guide.svg" alt="" /></ListItem>
+                    <ListItem>Niche Fragrances<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/niche_fragrances.svg" alt="" /></ListItem>
+                    <ListItem>Best Perfume $45 and Under<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/under_45.svg" alt="" /></ListItem>
+                </UnorderedList>
             </Box>
-        </>
-    )
+            <Box className={makeupstyles.productsContainer}>
+            <ProductList title={"fragrance"}/>
+
+            </Box>
+        </Box>
+    </Box>
+</>
+)
 }

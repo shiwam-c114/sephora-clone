@@ -1,8 +1,9 @@
 import React from "react";
 import makeupstyles from "./Styles/Makeup.module.css";
 import ReactStars from "react-rating-stars-component";
-import {Box,
-} from "@chakra-ui/react"
+import {Box} from "@chakra-ui/react";
+import  ProductListStyle  from "./Styles/ProductList.module.css";
+
 export const ProductList=({title})=>
 {  
     const [data,setData]=React.useState([]);
@@ -13,7 +14,8 @@ export const ProductList=({title})=>
         .then((res)=>res.json())
         .then((res)=>
         {
-            setData(res)
+            setData(res);
+            
         })
         .catch((error)=>
         {
@@ -28,8 +30,8 @@ export const ProductList=({title})=>
        {
          newData=data.sort((a,b)=>
         {
-            console.log(parseInt(b.rating), parseInt(a.rating))
-            return +b.rating-+a.rating;
+           
+            return parseFloat(b.rating)-parseFloat(a.rating);
         })
         
        }
@@ -41,6 +43,7 @@ export const ProductList=({title})=>
         ()=>
         {
             getData();
+            console.log(data);
         },[]
     )
 
@@ -61,18 +64,39 @@ export const ProductList=({title})=>
                 
                 data.map((item)=>
                 ( 
-                   <div>
-                    <div style={{display:"flex" ,justifyContent:"space-between",height:"25px",width:"90%"}}>
-                        {item.currentSku.isNew?<img width="35px"  src="https://img.icons8.com/material/344/new--v1.png" alt="" />:<img width="35px" height="20px" src="https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png" alt="" />}
-                        <img  width="20px" height="5px" src="https://cdn-icons-png.flaticon.com/512/812/812327.png" alt="" />
+                   <div style={{cursor: "pointer"}}>
+                    <div className={ProductListStyle.badgeHolderParent}>
+                        <div className={ProductListStyle.badgeHolder}>
+                            {item.currentSku.isNew?
+                            <div>
+                                <div className={ProductListStyle.badgeStyle}>new </div>
+                                <br />
+                            </div>
+                            :<></>}
+                        
+                            {item.currentSku.isLimitedEdition?<div>
+                                <div className={ProductListStyle.badgeStyle}>limited edition</div>
+                                <br />
+                            </div>
+                            :<></>}
+                            {item.currentSku.isOnlineOnly?
+                            <div>
+                                <div className={ProductListStyle.badgeStyle}>online only</div>
+                                <br />
+                            </div>
+                            :<></>}
+                        </div>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" >
+                            <path d="M22 3.1c2.7 2.2 2.6 7.2.1 9.7-2.2 2.8-7.4 8.1-9.3 9.6-.5.4-1.1.4-1.6 0-1.8-1.5-7-6.8-9.2-9.6-2.6-2.6-2.7-7.6 0-9.7C4.6.5 9.7.7 12 4.2 14.3.8 19.3.5 22 3.1zm-.7.8c-2.4-2.4-7.2-2-8.9 1.5-.1.3-.4.4-.7.2-.1 0-.2-.1-.2-.2-1.6-3.5-6.5-4-8.9-1.5C.4 5.6.5 10 2.7 12.2c2.2 2.7 7.3 8 9.1 9.4.1.1.2.1.3 0 1.8-1.4 6.9-6.7 9.1-9.5 2.3-2.1 2.4-6.5.1-8.2z"></path>
+                        </svg>
                     </div>
                     <img src={item.heroImage} alt="" /> 
                     <h5 style={{fontSize:"15px" , fontWeight:"650"}}>{item.brandName}</h5>
-                    <h5>{item.displayName}</h5>
+                    <h5 style={{fontSize:"18px" , fontWeight:"450"}}>{item.displayName}</h5>
                     <p style={{fontSize:"13px",fontWeight:"500" ,color:"grey"}}>{item.moreColors} colours</p>
                     <div style={{display:"flex",alignItems:"center",gap:"8px"}}>
-                        {console.log(item.rating)}
-                        <ReactStars  count={5} value={+item.rating}  isHalf size={20} activeColor="black" edit={false}/>
+                       
+                        <ReactStars  count={5} value={parseFloat(item.rating)}  isHalf size={20} activeColor="black" edit={false}/>
                         <p style={{marginTop:"3px",fontSize:"13px"}}>{item.reviews}</p>
                     </div>
                     <h3 style={{fontWeight:"700",fontSize:"18px"}}>{item.currentSku.listPrice}</h3>

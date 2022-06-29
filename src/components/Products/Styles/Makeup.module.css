@@ -24,6 +24,9 @@
 }
 .typeContainer
 {
+    margin: 25px 0 0 0;
+    font-size: 18px;
+    font-weight: 400;
     width: 100%;
 }
 .typeContainer >li
