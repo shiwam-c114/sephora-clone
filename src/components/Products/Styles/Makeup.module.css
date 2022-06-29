@@ -62,6 +62,12 @@
 {
     width: 28px;
 }
+.sortContainer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
 .productsContainer
 {
     display: grid;

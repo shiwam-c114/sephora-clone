@@ -275,10 +275,9 @@ export const Skincare=()=>
                             <ListItem>Clean Skincare Guide<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/clean_guide.svg" alt="" /></ListItem>
                         </UnorderedList>
                     </Box>
-                    <Box className={makeupstyles.productsContainer}>
+                    
                     <ProductList title={"skincare"}/>
 
-                    </Box>
                 </Box>
             </Box>
         </>

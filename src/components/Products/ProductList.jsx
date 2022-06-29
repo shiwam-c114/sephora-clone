@@ -1,10 +1,12 @@
 import React from "react";
-
+import makeupstyles from "./Styles/Makeup.module.css";
 import ReactStars from "react-rating-stars-component";
-
+import {Box,
+} from "@chakra-ui/react"
 export const ProductList=({title})=>
 {  
     const [data,setData]=React.useState([]);
+    const [sortValue,setsortValue]=React.useState("");
     const getData=()=>
     {
         fetch(`http://localhost:8080/${title}`)
@@ -18,7 +20,23 @@ export const ProductList=({title})=>
             console.log(error)
         })
     }
-
+    const handleSort=(e)=>
+    {
+       let {value} =e.target;
+       let newData=data;
+       if(value==="toprated")
+       {
+         newData=data.sort((a,b)=>
+        {
+            console.log(parseInt(b.rating), parseInt(a.rating))
+            return +b.rating-+a.rating;
+        })
+        
+       }
+       console.log("before",data)
+       setData([...newData]);
+       console.log("after",data);
+    }
     React.useEffect(
         ()=>
         {
@@ -27,8 +45,20 @@ export const ProductList=({title})=>
     )
 
     return(
-        <>
+        <>  <div className={makeupstyles.sortContainer}>
+                <label htmlFor="sortBtn">Sort</label>
+                <select name="sortBtn" onChange={(e)=>(handleSort(e))} className={makeupstyles.sortBtn}>
+                    <option value="relavance">Relavance</option>
+                    <option value="bestselling">Best Selling</option>
+                    <option value="toprated">Top Rated</option>
+                    <option value="lowtohigh">Price Low to High</option>
+                    <option value="hightolow">Price High to Low</option>
+                    <option value="new">New</option>
+                </select>
+            </div>
+            <Box className={makeupstyles.productsContainer}>
             {
+                
                 data.map((item)=>
                 ( 
                    <div>
@@ -41,13 +71,15 @@ export const ProductList=({title})=>
                     <h5>{item.displayName}</h5>
                     <p style={{fontSize:"13px",fontWeight:"500" ,color:"grey"}}>{item.moreColors} colours</p>
                     <div style={{display:"flex",alignItems:"center",gap:"8px"}}>
-                        <ReactStars  count={5} value={item.rating}  isHalf size={20} activeColor="black" edit={false}/>
+                        {console.log(item.rating)}
+                        <ReactStars  count={5} value={+item.rating}  isHalf size={20} activeColor="black" edit={false}/>
                         <p style={{marginTop:"3px",fontSize:"13px"}}>{item.reviews}</p>
                     </div>
                     <h3 style={{fontWeight:"700",fontSize:"18px"}}>{item.currentSku.listPrice}</h3>
                    </div>
                 ))
             }
+            </Box>
         
         </>
     )

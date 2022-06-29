@@ -269,10 +269,10 @@ export const Fragrance=()=>
                             <ListItem>Best Perfume $45 and Under<img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/under_45.svg" alt="" /></ListItem>
                         </UnorderedList>
                     </Box>
-                    <Box className={makeupstyles.productsContainer}>
+                    
                     <ProductList title={"fragrance"}/>
 
-                    </Box>
+       
                 </Box>
             </Box>
         </>

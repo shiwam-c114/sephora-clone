@@ -270,10 +270,10 @@ export const BathNBody=()=>
                             
                         </UnorderedList>
                     </Box>
-                    <Box className={makeupstyles.productsContainer}>
+                
                     <ProductList title={"bathNBody"}/>
 
-                    </Box>
+                    
                 </Box>
             </Box>
         </>
