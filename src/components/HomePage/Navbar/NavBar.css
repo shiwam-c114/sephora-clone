@@ -1,8 +1,10 @@
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0rem;
+    margin: 0rem;
 }
-
+.padding{
+    padding: 1rem;
+}
 .search_input{
     border-radius: 25px;
     border: 1px solid black;
