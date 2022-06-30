@@ -1,7 +1,5 @@
 import './App.css';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
-
- import  Pay from './components/payment/payment';
+import { Routes,Route } from 'react-router-dom';
 import Navbar from './components/common/Navbar';
 import { MakeupPage } from './pages/MakeupPage';
 import {GiftPage} from './pages/GiftPage';
@@ -11,6 +9,7 @@ import { ToolsNBrush } from './pages/ToolsNBrush';
 import { Fragrance } from './pages/Fragrance';
 import { Hair } from './pages/Hair';
 import { Skincare } from './pages/Skicare';
+import Home from './pages/Home';
 
 
 function App() {
@@ -19,7 +18,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <Routes>
-        <Route path="/" ></Route>
+        <Route path="/" element={ <Home /> } ></Route>
         <Route path="/makeup" element={<MakeupPage/>}></Route>
         <Route path="/gifts" element={<GiftPage/>}></Route>
         <Route path="/minisize" element={<MiniSize/>}></Route>

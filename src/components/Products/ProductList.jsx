@@ -38,7 +38,7 @@ export const ProductList=({title})=>
                         <div className={ProductListStyle.badgeHolder}>
                             {item.currentSku.isNew?
                             <div>
-                                <div className={ProductListStyle.badgeStyle}>new </div>
+                                <div className={ProductListStyle.badgeStyle}>new</div>
                                 <br />
                             </div>
                             :<></>}
