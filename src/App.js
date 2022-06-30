@@ -30,7 +30,7 @@ function App() {
         <Route path="/ProdDesc/:productId" element={<Description />}></Route>
       </Routes>
       
-      
+
     </div>
   );
 

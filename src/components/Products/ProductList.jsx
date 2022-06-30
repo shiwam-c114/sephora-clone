@@ -2,40 +2,101 @@ import React from "react";
 import {Link} from "react-router-dom"
 import ReactStars from "react-rating-stars-component";
 
+import makeupstyles from "./Styles/Makeup.module.css";
+
+import StarRatings from 'react-star-ratings';
+import {Box} from "@chakra-ui/react";
 import  ProductListStyle  from "./Styles/ProductList.module.css";
 
 export const ProductList=({title})=>
 {  
     const [data,setData]=React.useState([]);
+    
     const getData=()=>
     {
         fetch(`http://localhost:8080/${title}`)
         .then((res)=>res.json())
         .then((res)=>
         {
-            setData(res)
+            setData(res);
+            
         })
         .catch((error)=>
         {
             console.log(error)
         })
     }
-
+    const handleSort=(e)=>
+    {
+       let {value} =e.target;
+       let newData=[...data];
+       if(value==="toprated")
+       {
+         newData=data.sort((a,b)=>
+        {
+           
+            return parseFloat(b.rating)-parseFloat(a.rating);
+        })
+            
+       }
+       else if(value==="lowtohigh")
+       {
+            newData=data.sort((a,b)=>
+            {
+                a=+(a.currentSku.listPrice.split(".")[0].slice(1));
+                
+                b=+(b.currentSku.listPrice.split(".")[0].slice(1));
+                return a-b;
+            })
+            
+       }
+       else if(value==="hightolow")
+       {
+            newData=data.sort((a,b)=>
+            {
+                a=+(a.currentSku.listPrice.split(".")[0].slice(1));
+                
+                b=+(b.currentSku.listPrice.split(".")[0].slice(1));
+                return b-a;
+            })
+            
+       }
+       else
+       {
+        getData();
+       }
+       setData([...newData]);
+       
+    }
     React.useEffect(
         ()=>
         {
             getData();
+            
         },[]
     )
 
     return(
-        <>
+        <>  <div className={makeupstyles.sortContainer}>
+                <label htmlFor="sortBtn">Sort :</label>
+                <select name="sortBtn" onChange={(e)=>(handleSort(e))} className={makeupstyles.sortBtn}>
+                    <option value="relavance">Relavance (Default)</option>
+                    <option value="bestselling">Best Selling</option>
+                    <option value="toprated">Top Rated</option>
+                    <option value="lowtohigh">Price Low to High</option>
+                    <option value="hightolow">Price High to Low</option>
+                    <option value="new">New</option>
+                </select>
+            </div>
+            <Box className={makeupstyles.productsContainer}>
             {
+                
                 data.map((item)=>
                 ( 
                     <Link to={`/ProdDesc/${item.productId}`}>
                     
-                   <div style={{cursor: "pointer"}}>
+                   <div style={{cursor: "pointer"}} key={item.productId} >
+                       
                     <div className={ProductListStyle.badgeHolderParent}>
                         <div className={ProductListStyle.badgeHolder}>
                             {item.currentSku.isNew?
@@ -66,14 +127,24 @@ export const ProductList=({title})=>
                     <h5 style={{fontSize:"18px" , fontWeight:"450"}}>{item.displayName}</h5>
                     <p style={{fontSize:"13px",fontWeight:"500" ,color:"grey"}}>{item.moreColors} colours</p>
                     <div style={{display:"flex",alignItems:"center",gap:"8px"}}>
-                        <ReactStars  count={5} value={+item.rating}  isHalf size={20} activeColor="black" edit={false}/>
+                       
+                    <StarRatings
+                    rating={parseFloat(item.rating)}
+                    starRatedColor="black"
+                    numberOfStars={5}
+                    name='rating'
+                    starDimension="16px"
+                    starSpacing="1px"
+                    />
                         <p style={{marginTop:"3px",fontSize:"13px"}}>{item.reviews}</p>
                     </div>
+                    
                     <h3 style={{fontWeight:"700",fontSize:"18px"}}>{item.currentSku.listPrice}</h3>
                    </div>
                    </Link>
                 ))
             }
+            </Box>
         
         </>
     )
