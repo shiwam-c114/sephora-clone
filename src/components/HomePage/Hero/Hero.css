@@ -1,0 +1,9 @@
+.hero_images{
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.hero_images>div{
+    padding: 1rem;
+}
