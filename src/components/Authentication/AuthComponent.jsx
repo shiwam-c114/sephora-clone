@@ -235,9 +235,98 @@ export const AuthComponent=()=>
                 </PopoverHeader>
                 <PopoverCloseButton />
                 <PopoverBody>
-                    <Button colorScheme='blue'>Button</Button>
+                    <Box display="flex" flexDirection="row" gap="20px" justifyContent="space-between" padding="10px">
+                        <Box>
+                            <h2 style={{fontSize:"16px", fontWeight:"500"}}>Beauty Insider Summary</h2>
+                            <h4 style={{fontSize:"14px" ,fontWeight:"500",color:"grey"}}>View activity, savings, benefits</h4>
+                        </Box>
+                        <Image width="60px" src="https://www.sephora.com/img/ufe/bi/logo-bi-stacked.svg"/>
+                    </Box>
+                    <hr />
+                    <Box padding="10px">
+                            <h2 style={{fontSize:"16px", fontWeight:"500"}}>Rewards Bazaar</h2>
+                            <h4 style={{fontSize:"14px" ,fontWeight:"500",color:"grey"}}>Redeem items, samples, more</h4>
+                    </Box>
+                    <hr />
+                    <Box display="flex" flexDirection="row" gap="20px" padding="10px">
+                        <Image width="30px" height="30px"  src="https://www.sephora.com/img/ufe/icons/subscription.svg"/>
+                        <Box>
+                            <h2 style={{fontSize:"16px", fontWeight:"500"}}>Buy It Again</h2>
+                            <h4 style={{fontSize:"14px" ,fontWeight:"500",color:"grey"}}>Reorder from in-store and online purchases</h4>
+                        </Box>
+                    </Box>
+                    <hr/>
+                    <Box display="flex" flexDirection="row" gap="20px"  padding="10px"  >
+                        <Image width="30px" height="30px" src="https://www.sephora.com/img/ufe/icons/track.svg"/>
+                        <Box>
+                            <h2 style={{fontSize:"16px", fontWeight:"500"}}>Orders</h2>
+                            <h4 style={{fontSize:"14px" ,fontWeight:"500",color:"grey"}}>View & track online or pickup orders</h4>
+                        </Box>
+                    </Box>
+                    <hr />
+                    <Box display="flex" flexDirection="row" gap="20px" padding="10px">
+                        <Image width="30px" height="30px"  src="https://www.sephora.com/img/ufe/icons/auto-replenish.svg"/>
+                        <Box>
+                            <h2 style={{fontSize:"16px", fontWeight:"500"}}>Auto-Replinish</h2>
+                            <h4 style={{fontSize:"14px" ,fontWeight:"500",color:"grey"}}>View and manage your subscriptions</h4>
+                        </Box>
+                    </Box>
+                    <hr />
+                    <Box display="flex" flexDirection="row" gap="20px" padding="10px">
+                        <Image width="30px" height="30px"  src="https://www.sephora.com/img/ufe/icons/heart.svg"/>
+                        <Box>
+                            <h2 style={{fontSize:"16px", fontWeight:"500"}}>Loves</h2>
+                            <h4 style={{fontSize:"14px" ,fontWeight:"500",color:"grey"}}>View saved products</h4>
+                        </Box>
+                    </Box>
+                    <hr />
+                    <Box display="flex" flexDirection="row" gap="20px" padding="10px" >
+                        <Image width="30px" height="30px"  src="https://www.sephora.com/img/ufe/icons/account.svg"/>
+                        <Box>
+                            <h2 style={{fontSize:"16px", fontWeight:"500"}}>Account Settings</h2>
+                            <h4 style={{fontSize:"14px" ,fontWeight:"500",color:"grey"}}>Payment, contact info,addresses,password</h4>
+                        </Box>
+                    </Box>
+                    <hr />
+                    <Box display="flex" flexDirection="row" gap="20px" padding="10px" >
+                        <Image width="30px" height="30px"  src="https://www.sephora.com/img/ufe/icons/cc-outline.svg"/>
+                        <Box>
+                            <h2 style={{fontSize:"16px", fontWeight:"500"}}>Sephora Credit Card Progra,</h2>
+                            <h4 style={{fontSize:"14px" ,fontWeight:"500",color:"grey"}}>Apply now</h4>
+                        </Box>
+                    </Box>
+                    <hr />
+                    <Box display="flex" flexDirection="row" gap="20px" padding="10px" >
+                        <Image width="30px" height="30px"  src="https://www.sephora.com/img/ufe/icons/flash.svg"/>
+                        <Box>
+                            <h2 style={{fontSize:"16px", fontWeight:"500"}}>Flash</h2>
+                            <h4 style={{fontSize:"14px" ,fontWeight:"500",color:"grey"}}>Unlimited 1-2 Day Shipping Subscription</h4>
+                        </Box>
+                    </Box>
+                    <Box display="flex" flexDirection="row" gap="20px" padding="10px" >
+                        <Image width="30px" height="30px" src="https://www.sephora.com/img/ufe/icons/reservations.svg"/>
+                        <Box>
+                            <h2 style={{fontSize:"16px", fontWeight:"500"}}>Reservations</h2>
+                            <h4 style={{fontSize:"14px" ,fontWeight:"500",color:"grey"}}>Manage your services, classes, events</h4>
+                        </Box>
+                    </Box>
+                    <Box display="flex" flexDirection="row" gap="20px" padding="10px" >
+                        <Image width="30px" height="30px"  src="https://www.sephora.com/img/ufe/icons/traits.svg"/>
+                        <Box>
+                            <h2 style={{fontSize:"16px", fontWeight:"500"}}>Beauty Traits & Color iQ</h2>
+                            <h4 style={{fontSize:"14px" ,fontWeight:"500",color:"grey"}}>Compete your beauty traits for personalized recommendation</h4>
+                        </Box>
+                    </Box>
+                    <hr />
+                    <Box display="flex" flexDirection="row" gap="20px" padding="10px" >
+                        <Image width="30px" height="30px"  src="https://www.sephora.com/img/ufe/icons/recommendations.svg"/>
+                        <Box>
+                            <h2 style={{fontSize:"16px", fontWeight:"500"}}>Beauty Advisor Recommendations</h2>
+                            <h4 style={{fontSize:"14px" ,fontWeight:"500",color:"grey"}}>Recommendations from your store visits</h4>
+                        </Box>
+                    </Box>
                 </PopoverBody>
-                <PopoverFooter>This is the footer</PopoverFooter>
+                
                 </PopoverContent>
             </Portal>
             </Popover>
