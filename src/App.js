@@ -11,6 +11,7 @@ import { Hair } from './pages/Hair';
 import { Skincare } from './pages/Skicare';
 import Home from './pages/Home';
 import NavBar from './components/HomePage/Navbar/NavBar';
+import Description from './pages/Description';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/fragrance" element={<Fragrance/>}></Route>
         <Route path="/hair" element={<Hair/>}> </Route>
         <Route path="/skincare" element={<Skincare/>}></Route>
+        <Route path="/ProdDesc/:productId" element={<Description />}></Route>
       </Routes>
       
 

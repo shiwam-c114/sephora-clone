@@ -1,4 +1,7 @@
 import React from "react";
+import {Link} from "react-router-dom"
+import ReactStars from "react-rating-stars-component";
+
 import makeupstyles from "./Styles/Makeup.module.css";
 
 import StarRatings from 'react-star-ratings';
@@ -90,9 +93,10 @@ export const ProductList=({title})=>
                 
                 data.map((item)=>
                 ( 
-                   <div 
-                   key={item.productId}
-                   style={{cursor: "pointer"}}>
+                    <Link to={`/ProdDesc/${item.productId}`}>
+                    
+                   <div style={{cursor: "pointer"}} key={item.productId} >
+                       
                     <div className={ProductListStyle.badgeHolderParent}>
                         <div className={ProductListStyle.badgeHolder}>
                             {item.currentSku.isNew?
@@ -137,6 +141,7 @@ export const ProductList=({title})=>
                     
                     <h3 style={{fontWeight:"700",fontSize:"18px"}}>{item.currentSku.listPrice}</h3>
                    </div>
+                   </Link>
                 ))
             }
             </Box>
