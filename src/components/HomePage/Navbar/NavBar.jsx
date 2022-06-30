@@ -5,11 +5,12 @@ import store from "../../../img/communityicon.png"
 import signin from "../../../img/signin.png"
 import community from "../../../img/communityicon1.png"
 import "./NavBar.css"
+import Popup from './Popup'
 const NavBar = () => {
 
    const login=()=>
    {
-    
+    return 
      
    }
 
@@ -57,7 +58,7 @@ const NavBar = () => {
           <div className='flex' onClick={login}>
             <img src={signin} alt="" className='icon_size'/>
             <div className='flex_center'>
-              <p>Sign in</p>
+               <Popup/>
             </div>
           </div>
       
