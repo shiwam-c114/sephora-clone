@@ -269,10 +269,10 @@ export const GiftPage=()=>
                             
                         </UnorderedList>
                     </Box>
-                    <Box className={makeupstyles.productsContainer}>
+                    
                     <ProductList title={"gifts"}/>
 
-                    </Box>
+   
                 </Box>
             </Box>
         </>

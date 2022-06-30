@@ -1,8 +1,5 @@
 import './App.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-
-
-  
 import Navbar from './components/common/Navbar';
 import { MakeupPage } from './pages/MakeupPage';
 import {GiftPage} from './pages/GiftPage';
