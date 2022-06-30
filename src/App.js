@@ -30,7 +30,7 @@ function App() {
         <Route path="/skincare" element={<Skincare/>}></Route>
       </Routes>
       
-      
+
     </div>
   );
 
