@@ -1,0 +1,20 @@
+.categoryContainer
+{
+    gap: 10px;
+    padding: 50px 50px 20px 0px;
+}
+.categoryContainer>li
+{
+    list-style: none;
+    padding: 10px ;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: row;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    justify-content: space-between;
+
+}
+.categoryContainer>li>img
+{
+    width: 28px;
+}

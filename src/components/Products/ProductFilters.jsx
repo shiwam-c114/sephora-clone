@@ -10,10 +10,17 @@ import makeupstyles from "./Styles/Makeup.module.css";
 
 export const ProductFilters=({filters})=>
 {
+    function handleClick(e,i) {
+        if(i === "New"){
+            
+        }
+        // console.dir(e.target)
+        // console.dir(e.target.outerHTML);
+    }
     return(
         <>
         <Box className={makeupstyles.filterContainer} padding="20px">
-        <Accordion  allowMultiple allowToggle width="250px" padding="0px">
+        <Accordion allowMultiple allowToggle width="250px" padding="0px">
             { filters?.map((item)=>(
                 <AccordionItem key={item.title}>
                 <h2>
