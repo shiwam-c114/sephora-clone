@@ -10,15 +10,17 @@ import { Fragrance } from './pages/Fragrance';
 import { Hair } from './pages/Hair';
 import { Skincare } from './pages/Skicare';
 import Home from './pages/Home';
+import NavBar from './components/HomePage/Navbar/NavBar';
 
 
 function App() {
   return (
 
     <div className="App">
+      <NavBar />
       <Navbar/>
       <Routes>
-        <Route path="/" element={ <Home /> } ></Route>
+        <Route path="/" element={<Home />} ></Route>
         <Route path="/makeup" element={<MakeupPage/>}></Route>
         <Route path="/gifts" element={<GiftPage/>}></Route>
         <Route path="/minisize" element={<MiniSize/>}></Route>

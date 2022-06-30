@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Img, Box, Flex } from "@chakra-ui/react";
 import CarousalCss from "./CarousalCss.module.css";
-import MainCarousalCard from "./MainCarousalCard";
+
 
 function MainCarousal({ ToShow }) {
   function movePrev(e) {
@@ -46,7 +46,7 @@ function MainCarousal({ ToShow }) {
 
       {ToShow.map((item) => (       
         <>
-        <MainCarousalCard item={item}/>
+                <Img p="5px" w="50%" borderRadius="4px" src={item.img}></Img>
         </>            
       ))}
 
