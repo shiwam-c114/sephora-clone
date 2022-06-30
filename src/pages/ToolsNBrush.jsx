@@ -261,10 +261,10 @@ export const ToolsNBrush=()=>
                             <ListItem>Cruelty-Free <img src="https://www.sephora.com/contentimages/meganav/icons/crueltyfree.svg" alt="" /></ListItem>
                         </UnorderedList>
                     </Box>
-                    <Box className={makeupstyles.productsContainer}>
+                    
                     <ProductList title={"toolsNBrushes"}/>
 
-                    </Box>
+                    
                 </Box>
             </Box>
         </>

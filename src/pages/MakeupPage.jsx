@@ -270,10 +270,7 @@ export const MakeupPage=()=>
                             <ListItem>Foundation Quiz <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/foundation_quiz.svg" alt="" /></ListItem>
                         </UnorderedList>
                     </Box>
-                    <Box className={makeupstyles.productsContainer}>
                     <ProductList title={"makeup"}/>
-
-                    </Box>
                 </Box>
             </Box>
         </>

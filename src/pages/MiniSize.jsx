@@ -257,10 +257,9 @@ export const MiniSize=()=>
                 </Box>
                 <Box className={makeupstyles.rightContainer}>
                     
-                    <Box className={makeupstyles.productsContainer}>
+                   
                     <ProductList title={"miniSize"}/>
 
-                    </Box>
                 </Box>
             </Box>
         </>
