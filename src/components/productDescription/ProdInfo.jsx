@@ -5,6 +5,7 @@ import { PhoneIcon, AddIcon, WarningIcon, StarIcon, CheckCircleIcon } from '@cha
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Radio, RadioGroup } from '@chakra-ui/react'
 import ReactStars from "react-rating-stars-component";
+import StarRatings from 'react-star-ratings';
 
 
 function ProdInfo({ price, brandName, displayName, rating, reviews }) {
@@ -16,12 +17,20 @@ function ProdInfo({ price, brandName, displayName, rating, reviews }) {
             <h2 className="prodDetail">{displayName} </h2>
             <div className="prodDetailFlex">
                 <div className="Rating" >
+                    {/* <Icon as={StarIcon} w={3} h={3} />
                     <Icon as={StarIcon} w={3} h={3} />
                     <Icon as={StarIcon} w={3} h={3} />
-                    <Icon as={StarIcon} w={3} h={3} />
-                    <Icon as={StarIcon} w={3} h={3} />
-                    <ReactStars count={5} value={+rating} isHalf size={20} activeColor="black" edit={false} />
-                    <p style={{ marginTop: "3px", fontSize: "13px" }}>{reviews}</p>
+                    <Icon as={StarIcon} w={3} h={3} /> */}
+                    {/* <ReactStars count={5} value={+rating} isHalf size={20} activeColor="black" edit={false} />
+                    <p style={{ marginTop: "3px", fontSize: "13px" }}>{reviews}</p> */}
+                    <StarRatings
+                    rating={+rating}
+                    starRatedColor="black"
+                    numberOfStars={5}
+                    name='rating'
+                    starDimension="16px"
+                    starSpacing="1px"
+                    />
 
 
                     {/* <p className="ratingText">  549 </p> */}
