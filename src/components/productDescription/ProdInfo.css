@@ -6,6 +6,8 @@
     display: flex;
     margin-top: 2%;
     
+    width: 30%;
+    
 }
 .ratingText{
     color: black;
@@ -82,10 +84,12 @@
     
     padding-right: 25%;
     padding-top: 4%;
+    padding-left: 2%;
     
 
 
 }
 .radioButtonInfo2{
     padding-right: 68%;
+    padding-left: 2%;
 }

@@ -1,10 +1,10 @@
+import "./ProdInfo.css"
+import StarRatings from 'react-star-ratings';
 import React, { useEffect, useState } from "react";
 import "./ProdInfo.css";
-import { Icon } from "@chakra-ui/react";
-
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { Radio, RadioGroup } from "@chakra-ui/react";
-import ReactStars from "react-rating-stars-component";
+
 
 function ProdInfo({ price, brandName, displayName, rating, reviews }) {
   const [prevData, setprevData] = useState([]);
@@ -42,14 +42,14 @@ function ProdInfo({ price, brandName, displayName, rating, reviews }) {
       <h2 className="prodDetail">{displayName} </h2>
       <div className="prodDetailFlex">
         <div className="Rating">
-          <ReactStars
-            count={5}
-            value={+rating}
-            isHalf
-            size={20}
-            activeColor="black"
-            edit={false}
-          />
+        <StarRatings
+                    rating={+rating}
+                    starRatedColor="black"
+                    numberOfStars={5}
+                    name='rating'
+                    starDimension="16px"
+                    starSpacing="1px"
+                    />
           <p style={{ marginTop: "3px", fontSize: "13px" }}>{reviews}</p>
 
           {/* <p className="ratingText">  549 </p> */}
