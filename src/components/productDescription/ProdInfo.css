@@ -1,5 +1,6 @@
 .ProdInfodiv{
     /* border:1px solid red; */
+    padding-top: 3%;
 }
 .Rating{
     display: flex;
