@@ -2,7 +2,6 @@ import './App.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
 
- import  Pay from './components/payment/payment';
 import Navbar from './components/common/Navbar';
 import { MakeupPage } from './pages/MakeupPage';
 import {GiftPage} from './pages/GiftPage';
