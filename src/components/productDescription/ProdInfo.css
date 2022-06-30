@@ -1,0 +1,90 @@
+.ProdInfodiv{
+    /* border:1px solid red; */
+}
+.Rating{
+    display: flex;
+    margin-top: 2%;
+    
+}
+.ratingText{
+    color: black;
+    font-weight: 700;
+    margin-right:20%;
+    padding-bottom: 2%;
+    
+    
+
+    
+    
+}
+.ShippingType{
+    height: 150px;
+    width: 600px;
+    /* border: 1px solid red; */
+    background-color: #F6F6F8;
+}
+.prodTitle{
+    text-align: left;
+    cursor: pointer;
+    font-weight: 700;
+    
+}
+.prodDetail{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 16px;
+    text-align: left;
+}
+.prodDetailFlex{
+    display: flex;
+}
+.offer{
+    color:red
+}
+.offerText{
+    padding-top: 2%;
+    text-align: left;
+}
+.offerImage{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.sizeAv{
+    text-align: left;
+}
+.btn1{
+    padding-right: 100%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    
+    
+
+}
+.ShippingTypeText{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2%;
+}
+.ShippingTypeText1{
+    color: black;
+    font-weight: 800;
+    padding-left: 2%;
+}
+.ShippingTypeText2{
+    cursor: pointer;
+    color: #136BEA;
+    font-size: 14px;
+    padding-right: 2%;
+    
+}
+.radioButtonInfo1{
+    
+    padding-right: 25%;
+    padding-top: 4%;
+    
+
+
+}
+.radioButtonInfo2{
+    padding-right: 68%;
+}
