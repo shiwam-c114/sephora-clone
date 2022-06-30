@@ -4,11 +4,13 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
  import  Pay from './components/payment/payment'
  import { ChakraProvider } from '@chakra-ui/react';
  import Home from "./pages/Home"
+import Popup from './components/HomePage/Navbar/Popup';
 function App() {
   return (
 
     <div className="App">
       <Home/>
+      {/* <Popup/> */}
     </div>
   );
 
