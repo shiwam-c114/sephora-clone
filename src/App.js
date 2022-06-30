@@ -9,6 +9,7 @@ import { ToolsNBrush } from './pages/ToolsNBrush';
 import { Fragrance } from './pages/Fragrance';
 import { Hair } from './pages/Hair';
 import { Skincare } from './pages/Skicare';
+import Description from './pages/Description';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/fragrance" element={<Fragrance/>}></Route>
         <Route path="/hair" element={<Hair/>}> </Route>
         <Route path="/skincare" element={<Skincare/>}></Route>
+        <Route path="/ProdDesc/:productId" element={<Description />}></Route>
       </Routes>
       
 
