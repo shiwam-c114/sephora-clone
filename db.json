@@ -13081,18 +13081,32 @@
       "day": "6",
       "zipcode": "686515",
       "id": 1,
-      "cart":[]
+      "cart": []
     },
     {
       "first": "Rahul",
       "last": "K P",
       "email": "rahultoms@gmail.com",
       "password": "Rahul1@",
-      "phone": "9495458816",
-      "month": "may",
+      "phone": "94458816",
+      "month": "my",
       "day": "1",
       "zipcode": "686515",
-      "id": 2
+      "id": 2,
+      "cart": [
+        {
+          "price": "$35.00",
+          "brandName": "Supergoop!",
+          "displayName": "SPF Yeah! Sunscreen Kit",
+          "rating": "4.4"
+        },
+        {
+          "price": "$35.00",
+          "brandName": "Supergoop!",
+          "displayName": "SPF Yeah! Sunscreen Kit",
+          "rating": "4.4"
+        }
+      ]
     }
   ]
 }
