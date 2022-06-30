@@ -9,7 +9,7 @@
     border-radius: 25px;
     border: 1px solid black;
     padding: 10px;
-    width: 20rem;  
+    /* width: 20rem;   */
 }
 .search_div{
     display: flex;
@@ -43,5 +43,5 @@
 }
 
 .icon_div svg{
-    width: 50px;
+    /* width: 50px; */
 }
