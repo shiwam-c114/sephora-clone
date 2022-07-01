@@ -13093,22 +13093,7 @@
       "day": "1",
       "zipcode": "686515",
       "id": 2,
-
-      "cart": [
-        {
-          "price": "$8.00",
-          "brandName": "Sephora Favorites",
-          "displayName": "Hello!—Most-Loved Beauty",
-          "rating": "4.725"
-        },
-        {
-          "price": "$8.00",
-          "brandName": "Sephora Favorites",
-          "displayName": "Hello!—Most-Loved Beauty",
-          "rating": "4.725"
-        }
-      ]
-
+      "cart": []
     }
   ]
 }
