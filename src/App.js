@@ -1,4 +1,5 @@
 import './App.css';
+<<<<<<< HEAD
 import { Routes,Route } from 'react-router-dom';
 import Navbar from './components/common/Navbar';
 import { MakeupPage } from './pages/MakeupPage';
@@ -14,17 +15,29 @@ import NavBar from './components/HomePage/Navbar/NavBar';
 import Description from './pages/Description';
 
 
+=======
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+ import One ,{Two}from './components/checkout/checkout'
+ import  Pay from './components/payment/payment'
+ import Basket from './components/basket/basket';
+ import { ChakraProvider } from '@chakra-ui/react';
+>>>>>>> e1d11c5a6888d4b9be228e3d46dd7f5501b681d2
 function App() {
   return (
   
     
+<<<<<<< HEAD
 
     <div className="App">
       <Navbar/>
       <Routes>
       <Route path='/one' element={<One/>} />
+=======
+<Route path='/bas' element={<One/>} />
+>>>>>>> e1d11c5a6888d4b9be228e3d46dd7f5501b681d2
 <Route path='/next' element={<Two/>} />
 <Route path='/pay' element={<Pay/>} />
+<Route path='/' element={<Basket/>} />
 
         <Route path="/" element={<Home />} ></Route>
         <Route path="/makeup" element={<MakeupPage/>}></Route>

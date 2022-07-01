@@ -15,7 +15,7 @@ export default function One() {
     let redirect = useNavigate()
     const nextpage = () => {
         console.log("sai")
-        redirect('next')
+        redirect('../next')
     }
     return (
         <>
