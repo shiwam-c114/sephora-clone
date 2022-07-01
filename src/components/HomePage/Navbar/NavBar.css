@@ -1,0 +1,47 @@
+*{
+    padding: 0rem;
+    margin: 0rem;
+}
+.padding{
+    padding: 1rem;
+}
+.search_input{
+    border-radius: 25px;
+    border: 1px solid black;
+    padding: 10px;
+    /* width: 20rem;   */
+}
+.search_div{
+    display: flex;
+}
+.flex{
+    display: flex;
+}
+.icon_size{
+    width: auto;
+    height: 30px;
+}
+.flex_center{
+    text-align: center;
+    align-items: center;
+    padding-left: 10px;
+
+}
+.nav_right{
+    text-align: center;
+}
+.nav_right>div{
+    margin-left: 3rem;
+    justify-content: center;
+}
+.padding{
+    padding: 1rem;
+}
+.icon_div{
+    display: flex;
+    padding: 0px;
+}
+
+.icon_div svg{
+    /* width: 50px; */
+}
