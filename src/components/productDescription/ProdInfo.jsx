@@ -72,7 +72,7 @@ function ProdInfo({ price, brandName, displayName, rating, reviews }) {
 
 
                     </RadioGroup>
-                    <Button colorScheme='teal' size='md'>
+                    <Button colorScheme='red' size='md'>
                         Add to cart
                     </Button>
 
