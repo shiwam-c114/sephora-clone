@@ -1,21 +1,13 @@
 import React from "react";
 import makeupstyles from "./Styles/Makeup.module.css";
-import {
-    ListItem,
-    UnorderedList,
-    
-} from "@chakra-ui/react"
+import { ListItem, UnorderedList } from "@chakra-ui/react";
 
-export const ProductType=({type})=>
-{
-    return(
+export const ProductType = ({ type }) => {
+  return (
     <UnorderedList className={makeupstyles.typeContainer}>
-        { type?.map((item)=>
-        (
-            <ListItem key={item}>{item}</ListItem>
-        ))
-         
-        }
-    </UnorderedList>  
-    )
-}
+      {type?.map((item) => (
+        <ListItem key={item}>{item}</ListItem>
+      ))}
+    </UnorderedList>
+  );
+};

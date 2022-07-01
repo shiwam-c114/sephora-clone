@@ -1,95 +1,80 @@
-.ProdInfodiv{
-    /* border:1px solid red; */
-    padding-top: 3%;
+.ProdInfodiv {
+  /* border:1px solid red; */
+  padding-top: 3%;
 }
-.Rating{
-    display: flex;
-    margin-top: 2%;
-    
-    width: 30%;
-    
-}
-.ratingText{
-    color: black;
-    font-weight: 700;
-    margin-right:20%;
-    padding-bottom: 2%;
-    
-    
+.Rating {
+  display: flex;
+  margin-top: 2%;
 
-    
-    
+  width: 30%;
 }
-.ShippingType{
-    height: 150px;
-    width: 600px;
-    /* border: 1px solid red; */
-    background-color: #F6F6F8;
+.ratingText {
+  color: black;
+  font-weight: 700;
+  margin-right: 20%;
+  padding-bottom: 2%;
 }
-.prodTitle{
-    text-align: left;
-    cursor: pointer;
-    font-weight: 700;
-    
+.ShippingType {
+  height: 150px;
+  width: 600px;
+  /* border: 1px solid red; */
+  background-color: #f6f6f8;
 }
-.prodDetail{
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    font-size: 16px;
-    text-align: left;
+.prodTitle {
+  text-align: left;
+  cursor: pointer;
+  font-weight: 700;
 }
-.prodDetailFlex{
-    display: flex;
+.prodDetail {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 16px;
+  text-align: left;
 }
-.offer{
-    color:red
+.prodDetailFlex {
+  display: flex;
 }
-.offerText{
-    padding-top: 2%;
-    text-align: left;
+.offer {
+  color: red;
 }
-.offerImage{
-    padding-top: 2%;
-    padding-bottom: 2%;
+.offerText {
+  padding-top: 2%;
+  text-align: left;
 }
-.sizeAv{
-    text-align: left;
+.offerImage {
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
-.btn1{
-    padding-right: 100%;
-    padding-top: 2%;
-    padding-bottom: 3%;
-    
-    
-
+.sizeAv {
+  text-align: left;
 }
-.ShippingTypeText{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 2%;
+.btn1 {
+  padding-right: 100%;
+  padding-top: 2%;
+  padding-bottom: 3%;
 }
-.ShippingTypeText1{
-    color: black;
-    font-weight: 800;
-    padding-left: 2%;
+.ShippingTypeText {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2%;
 }
-.ShippingTypeText2{
-    cursor: pointer;
-    color: #136BEA;
-    font-size: 14px;
-    padding-right: 2%;
-    
+.ShippingTypeText1 {
+  color: black;
+  font-weight: 800;
+  padding-left: 2%;
 }
-.radioButtonInfo1{
-    
-    padding-right: 25%;
-    padding-top: 4%;
-    padding-left: 2%;
-    
-
-
+.ShippingTypeText2 {
+  cursor: pointer;
+  color: #136bea;
+  font-size: 14px;
+  padding-right: 2%;
 }
-.radioButtonInfo2{
-    padding-right: 68%;
-    padding-left: 2%;
+.radioButtonInfo1 {
+  padding-right: 25%;
+  padding-top: 4%;
+  padding-left: 2%;
+}
+.radioButtonInfo2 {
+  padding-right: 68%;
+  padding-left: 2%;
 }

@@ -1,14 +1,13 @@
-import "./ProdInfo.css"
-import StarRatings from 'react-star-ratings';
+import "./ProdInfo.css";
+import StarRatings from "react-star-ratings";
 import React, { useEffect, useState } from "react";
 import "./ProdInfo.css";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { Radio, RadioGroup } from "@chakra-ui/react";
 
-
 function ProdInfo({ price, brandName, displayName, rating, reviews }) {
   const [prevData, setprevData] = useState([]);
-  const [curData, setCurData] = useState([])
+  const [curData, setCurData] = useState([]);
   function addToBasket() {
     fetch(`http://localhost:8080/userData/2`)
       .then((res) => res.json())
@@ -19,7 +18,7 @@ function ProdInfo({ price, brandName, displayName, rating, reviews }) {
         setprevData(daTa.cart);
         console.log(prevData, "updatd prevData");
       });
-      setCurData([{ price, brandName, displayName, rating, reviews }])
+    setCurData([{ price, brandName, displayName, rating, reviews }]);
   }
   useEffect(() => {
     fetch("http://localhost:8080/userData/2", {
@@ -42,14 +41,14 @@ function ProdInfo({ price, brandName, displayName, rating, reviews }) {
       <h2 className="prodDetail">{displayName} </h2>
       <div className="prodDetailFlex">
         <div className="Rating">
-        <StarRatings
-                    rating={+rating}
-                    starRatedColor="black"
-                    numberOfStars={5}
-                    name='rating'
-                    starDimension="16px"
-                    starSpacing="1px"
-                    />
+          <StarRatings
+            rating={+rating}
+            starRatedColor="black"
+            numberOfStars={5}
+            name="rating"
+            starDimension="16px"
+            starSpacing="1px"
+          />
           <p style={{ marginTop: "3px", fontSize: "13px" }}>{reviews}</p>
 
           {/* <p className="ratingText">  549 </p> */}

@@ -21,13 +21,12 @@ function Carousal({ ToShow }) {
   }
   useEffect(() => {
     setTimeout(() => {
-      let a = document.querySelectorAll(".CarousalCss_carousalHolder__S7--v")
-      a.forEach(node => {
+      let a = document.querySelectorAll(".CarousalCss_carousalHolder__S7--v");
+      a.forEach((node) => {
         node.scrollLeft += 30;
-      });  
-    },2000);
-    
-  },[])
+      });
+    }, 2000);
+  }, []);
 
   return (
     <div className={CarousalCss.carousalHolder}>
