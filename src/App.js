@@ -14,6 +14,7 @@ import Description from './pages/Description';
 import One, { Two } from './components/checkout/checkout'
 import Pay from './components/payment/payment'
 import Basket from './components/basket/basket';
+import Footer from "./components/homePage/Footer/Footer";
 
 
 
@@ -41,7 +42,7 @@ function App() {
         <Route path="/ProdDesc/:productId" element={<Description />}></Route>
       </Routes>
 
-
+    <Footer/>
     </div>
   );
 
