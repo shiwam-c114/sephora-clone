@@ -2,10 +2,9 @@ import { Box, Flex, Image, chakra } from "@chakra-ui/react";
 import React from "react";
 // import  ProductListStyle  from "../Products/Styles/ProductList.module.css";
 
-function CarousalCard({Item}) {
-
+function CarousalCard({ Item }) {
   return (
-    <a >
+    <a>
       <Flex
         m={4}
         w="230px"
@@ -54,11 +53,17 @@ function CarousalCard({Item}) {
               display="block"
               fontSize="sm"
               color="gray.800"
-              fontWeight="bold">
+              fontWeight="bold"
+            >
               {Item.brandName}
             </chakra.span>
-            <chakra.span maxW="50%" fontSize="sm" fontWeight="500" color="gray.700">
-             {Item.displayName}
+            <chakra.span
+              maxW="50%"
+              fontSize="sm"
+              fontWeight="500"
+              color="gray.700"
+            >
+              {Item.displayName}
             </chakra.span>
           </Box>
         </Box>

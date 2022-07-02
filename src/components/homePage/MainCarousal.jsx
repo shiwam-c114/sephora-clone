@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Img, Box, Flex } from "@chakra-ui/react";
 import CarousalCss from "./CarousalCss.module.css";
 
-
 function MainCarousal({ ToShow }) {
   function movePrev(e) {
     let k = e.target;
@@ -22,13 +21,12 @@ function MainCarousal({ ToShow }) {
   }
   useEffect(() => {
     setTimeout(() => {
-      let a = document.querySelectorAll(".CarousalCss_carousalHolder__S7--v")
-      a.forEach(node => {
+      let a = document.querySelectorAll(".CarousalCss_carousalHolder__S7--v");
+      a.forEach((node) => {
         node.scrollLeft += 30;
-      });  
-    },2000);
-    
-  },[])
+      });
+    }, 2000);
+  }, []);
 
   return (
     <div className={CarousalCss.carousalHolder}>
@@ -44,12 +42,11 @@ function MainCarousal({ ToShow }) {
         </svg>
       </button>
 
-      {ToShow.map((item) => (       
+      {ToShow.map((item) => (
         <>
-                <Img p="5px" w="50%" borderRadius="4px" src={item.img}></Img>
-        </>            
+          <Img p="5px" w="50%" borderRadius="4px" src={item.img}></Img>
+        </>
       ))}
-
 
       <button onClick={moveNext} className={CarousalCss.nextBtn}>
         <svg viewBox="0 0 24 40">
