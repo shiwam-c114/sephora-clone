@@ -59,7 +59,7 @@ function CarousalCard({ Item }) {
             </chakra.span>
             <chakra.span
               maxW="50%"
-              fontSize="sm"
+              fontSize="10px"
               fontWeight="500"
               color="gray.700"
             >
