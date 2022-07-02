@@ -9,26 +9,20 @@ import {
     VStack,
     Radio, RadioGroup, Spacer,Select
 } from "@chakra-ui/react"
-
-//ADD NAVBAR
 import { useNavigate } from "react-router-dom"
-
 export default function Basket(){
-
     const n=useNavigate()
-const Nextpage=()=>{
-    console.log("sai")
-    n('/bas')
-
-}
-
-
+    const Nextpage=()=>{
+        console.log("sai")
+        n('/bas')
+    
+    }
     var No_item=2
     return (
         <>
 <Box mt='100px' ml='10%'>
 
-<Heading fontSize={'28px'} mb={'20px'}>
+<Heading>
 My Basket
 </Heading>
 <Flex>
@@ -62,8 +56,8 @@ borderColor={'blackAlpha.100'}
 >
     <Text>
         <Link>
-        Singn in</Link>
-        to see your Beauty Insider poitns
+        Sign in</Link>
+        to see your Beauty Insider points
     </Text>
     <Text>
         & redeem your rewards
@@ -115,7 +109,7 @@ borderColor={'blackAlpha.100'}
 
 
 <Box   p='2%'>
-<HStack m='2%' backgroundColor={'blackAlpha.50'} borderRadius={'10px'}>
+{/* <HStack m='2%' backgroundColor={'blackAlpha.50'} borderRadius={'10px'}>
     <Image src="https://www.sephora.com/productimages/sku/s1177567-main-zoom.jpg?imwidth=97"/>
     <Box mt='2%'>
        <Flex> <Text fontWeight={500}>kvd beuty</Text>
@@ -148,9 +142,188 @@ borderColor={'blackAlpha.100'}
 <Button borderRadius={'5px'}>Change Method</Button>
     </HStack>
     
-    
+    */}
+</Box> 
+
+</Box>
+<Box border="4px" w="95%"  borderColor={'blackAlpha.400'}>
+<Heading p='0px' backgroundColor={'blackAlpha.400'} fontSize='20px '>Add these For under $15</Heading>
+<Box mb='10px'  borderBottom={'2px'} borderColor={'blackAlpha.200'}>
+    <HStack>
+    <Image src='https://www.sephora.com/productimages/sku/s2414555-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=97'/>
+   
+   <Box pl='4%'>
+  <HStack>  <Text fontWeight={600} fontSize={'15px'}>SEPHORA COLLECTION
+</Text> 
+
+
+
+</HStack>
+
+    <Text fontSize={'15px'}>Silicon Scalp Massager
+
+</Text>
+    <Text fontSize={'10px'}>ITEM 2414555
+</Text>
+   </Box>
+   <Spacer></Spacer>
+<Box >
+  <Box>  
+<Text mr='30px' fontWeight={500}>$12</Text>
+</Box>
+<Box mr='50px' mt='25px'>
+<Button variant={'outline'}
+>Add</Button>
+</Box>
+</Box>
+    </HStack>
 </Box>
 
+
+
+<Box mb='10px'  borderBottom={'2px'} borderColor={'blackAlpha.200'} >
+    <HStack>
+    <Image src='https://www.sephora.com/productimages/sku/s2414555-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=97'/>
+   
+   <Box pl={'4%'}>
+  <HStack>  <Text  fontWeight={600} fontSize={'15px'}>SEPHORA COLLECTION
+</Text> 
+
+
+
+</HStack>
+
+    <Text fontSize={'15px'}>Silicon Scalp Massager
+
+</Text>
+    <Text fontSize={'10px'}>ITEM 2414555
+</Text>
+   </Box>
+   <Spacer></Spacer>
+<Box >
+  <Box>  
+<Text mr='30px' fontWeight={500}>$12</Text>
+</Box>
+<Box mr='50px' mt='25px'>
+<Button variant={'outline'}
+>Add</Button>
+</Box>
+</Box>
+    </HStack>
+</Box>
+<Box mb='10px' borderBottom={'2px'} borderColor={'blackAlpha.200'}>
+    <HStack>
+    <Image src='https://www.sephora.com/productimages/sku/s2414555-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=97'/>
+   
+   <Box pl={'4%'}>
+  <HStack>  <Text fontWeight={600} fontSize={'15px'}>SEPHORA COLLECTION
+</Text> 
+
+
+
+</HStack>
+
+    <Text fontSize={'15px'}>Silicon Scalp Massager
+
+</Text>
+    <Text fontSize={'10px'}>ITEM 2414555
+</Text>
+   </Box>
+   <Spacer></Spacer>
+<Box >
+  <Box>  
+<Text mr='30px' fontWeight={500}>$12</Text>
+</Box>
+<Box mr='50px' mt='25px'>
+<Button variant={'outline'}
+>Add</Button>
+</Box>
+</Box>
+    </HStack>
+</Box>
+
+</Box>
+<Box mt='40px'>
+    <Heading fontSize='25px'>
+    Recommended for You
+
+
+    </Heading>
+
+
+    <HStack>
+<VStack>
+
+<Image h='100px' src='https://www.sephora.com/productimages/sku/s1118033-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=135' />
+
+<Text>
+    SEPHORA COLLECTION
+</Text>
+<Text mt='0'>
+Retractable Waterproof Eyeliner
+
+</Text>
+<Text mt='0'>
+$13.00
+
+</Text>
+
+<Button variant='outline' borderRadius='15px' borderColor='black'>
+    Add
+
+</Button>
+</VStack>
+
+<VStack>
+<Image h='100px' src='https://www.sephora.com/productimages/sku/s2210607-main-zoom.jpg?imwidth=612' />
+
+<Text>
+The Ordinary
+
+</Text>
+<Text mt='0'>
+AHA 30% + BHA 2% Exfoliating Peeling Solution
+
+
+</Text>
+<Text mt='0'>
+$13.00
+
+</Text>
+
+<Button variant='outline' borderRadius='15px' borderColor='black'>
+    Add
+
+</Button>
+</VStack>
+
+<VStack>
+
+
+<Image h='100px' src='https://www.sephora.com/productimages/sku/s1807791-main-zoom.jpg?imwidth=135' />
+
+<Text>
+    NARS
+</Text>
+<Text mt='0'>
+Mini valvet Matte Lipstick
+
+</Text>
+<Text mt='0'>
+$13.00
+
+</Text>
+
+<Button variant='outline' borderRadius='15px' borderColor='black'>
+    Add
+
+</Button>
+
+
+
+</VStack>
+
+    </HStack>
 </Box>
 <Box mt='50px'>
     <Box >
@@ -169,11 +342,11 @@ borderColor={'blackAlpha.100'}
 
 
     </Text>
-    <Button border-width={"2px"} border={'1px solid black'} width={'25%'} mt='20px'>Sign in</Button>
+    <Button mt='20px'>Sign up</Button>
     </Box>
 </Box>
 </Box>
-<Box w='30%' ml='2%'>
+<Box w='25%' ml='2%'>
 <Box border={'2px'}p='7%' w='100%'h='-moz-max-content' borderColor={'blackAlpha.100'}>
     <HStack>
         <Text >Merchandise Subtotal
@@ -190,7 +363,7 @@ borderColor={'blackAlpha.100'}
 <Text  fontWeight={700}>TBD</Text>
     </HStack>
     <HStack mt='10px'>
-        <Text>Estimated Tax & Other Fees
+        <Text>Estemated Tax & Other Fees
 </Text>
 
 <Spacer></Spacer>
@@ -200,7 +373,7 @@ borderColor={'blackAlpha.100'}
 
 
     <HStack mt={'10px'}>
-        <Text fontWeight={700}>Estimated Total
+        <Text fontWeight={700}>Estemated Total
 </Text>
 
 <Spacer></Spacer>
@@ -216,8 +389,8 @@ or afterpay
 
 </Text>
 <Center mt='30px'alignItems={'center'}>
-   <Button w='275px' color='rgb(102, 102, 102)' borderRadius={'25px'} h='50px' borderColor={'rgb(238, 238, 238)'} border={'2px'} colorScheme={'gray'} onClick={Nextpage}>Checkout& Shipped Item</Button></Center><Center mt='30px'>
-   <Button w='275px' color='rgb(102, 102, 102)'  borderRadius={'25px'} h='50px' borderColor={'rgb(238, 238, 238)'} border={'2px'} colorScheme={'gray'} onClick={Nextpage} ><Text>Pay with</Text> <Image w='100px' src='https://www.sephora.com/img/ufe/logo-paypal.svg'/></Button>
+   <Button w='225px' borderRadius={'25px'} h='40px' colorScheme={'red'} onClick={Nextpage}>Checkout& Shipped Item</Button></Center><Center mt='30px'>
+   <Button w='225px'  borderRadius={'25px'} h='40px' borderColor={'red'} border={'2px'} colorScheme={'red'} onClick={Nextpage} ><Text>Pay with</Text> <Image w='100px' src='https://www.sephora.com/img/ufe/logo-paypal.svg'/></Button>
 
    </Center>
    </Box>
@@ -238,7 +411,7 @@ or afterpay
 </Text>
 <Text>TTY: 1-888-866-9845</Text>
 <Text>Free return shipping or return in store</Text>
-<Text>We accepted</Text>
+<Text>We accpted</Text>
 <HStack>
     <Image  w='30px'src='https://www.sephora.com/img/ufe/payments/sephora.svg'></Image>
     <Image w='30px' src='https://www.sephora.com/img/ufe/payments/payPal.svg'></Image>
@@ -253,7 +426,7 @@ or afterpay
 </Box>
 </Flex>
 </Box> 
-{/* <Center> footer here</Center> */}
+<Center> footer here</Center>
 </>
     )
 }
