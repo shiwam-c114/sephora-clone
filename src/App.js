@@ -11,9 +11,10 @@ import { Hair } from './pages/Hair';
 import { Skincare } from './pages/Skicare';
 import Home from './pages/Home';
 import Description from './pages/Description';
-import One, { Two } from './components/checkout/checkout'
+import One,{Two} from './components/checkout/checkout'
 import Pay from './components/payment/payment'
 import Basket from './components/basket/basket';
+
 
 
 
@@ -22,11 +23,12 @@ function App() {
 
 
 
+
     <div className="App">
       <Navbar />
       <Routes>
         <Route path='/bas' element={<One />} />
-        <Route path='/next' element={<Two />} />
+        <Route path='/next' element={<Two/>} />
         <Route path='/pay' element={<Pay />} />
         <Route path='/one' element={<Basket />} />
         <Route path="/" element={<Home />} ></Route>

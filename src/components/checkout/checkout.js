@@ -10,13 +10,47 @@ import {
     Radio, RadioGroup
 } from "@chakra-ui/react"
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 export default function One() {
     let redirect = useNavigate()
     const nextpage = () => {
         console.log("sai")
         redirect('../next')
     }
+
+
+    const [cart, setCart] = useState([])
+    async function getData() {
+      let Scart = localStorage.getItem("Scart")
+      Scart = await JSON.parse(Scart)
+      setCart(Scart)
+      console.log(Scart)
+      
+  
+    }
+  
+    useEffect(() => {
+      getData()
+  
+    }, [])
+    
+    useEffect(() => {
+      Total()
+    }, [cart])
+    
+    
+  const [total, setTotal] = useState(0)
+    function Total() {
+      let sum = 0
+      cart.forEach(element => {
+        sum+= +element.price.replace("$", "")
+        console.log(element.price.replace("$", ""));
+      });
+      console.log(sum);
+      setTotal(sum)
+    }
+  
+
     return (
         <>
             <Center height='100px' boxShadow='lg' >
@@ -79,8 +113,8 @@ export default function One() {
                 </Box>
                 <Box h='fit-content' spacing='50px' padding='2%' paddingTop='2%' width='-moz-max-content' border='1px' borderColor='grey' borderRadius='10px'>
                     <HStack spacing='50px'>
-                        <Text fontSize='15px'>Merchandise Subtotal</Text>
-                        <Text fontSize='15px' fontFamily='sans-serif' fontWeight='700'>500</Text>
+                        <Text  fontSize='15px'>Merchandise Subtotal</Text>
+                        <Text fontSize='15px'  fontFamily='sans-serif' fontWeight='700'>500</Text>
                     </HStack>
                     <HStack spacing='50px'><Text fontSize='15px'>Shipping & Handling
 
@@ -95,7 +129,7 @@ export default function One() {
                     </HStack>
                     <HStack mt='3%' spacing='50px'>
                         <Text fontSize='15px' fontFamily='sans-serif' fontWeight='700'>Estimated TOtal</Text>
-                        <Text fontSize='15px' fontFamily='sans-serif' fontWeight='700' ml='80px'>RS75</Text>
+                        <Text fontSize='15px' fontFamily='sans-serif' fontWeight='700' ml='80px'>{total}</Text>
 
                     </HStack>
                     <Text fontSize='12px'>or 4 payments of $18.75 with Klarna</Text>

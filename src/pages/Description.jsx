@@ -39,6 +39,7 @@ function Description() {
       <div className="Test">
         <ProdImage heroImage={descData.heroImage} />
         <ProdInfo
+          heroImage={descData.heroImage}
           price={descData.price}
           brandName={descData.brandName}
           displayName={descData.displayName}

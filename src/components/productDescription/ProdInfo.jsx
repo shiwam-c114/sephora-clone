@@ -14,9 +14,11 @@ import {
     MenuOptionGroup,
     MenuDivider,
 } from '@chakra-ui/react'
+import { useNavigate } from "react-router-dom";
 
 
-function ProdInfo({ price, brandName, displayName, rating, reviews }) {
+function ProdInfo({ price, brandName, displayName, rating, reviews, heroImage }) {
+    const n = useNavigate()
     const [prevData, setprevData] = useState([]);
     const [curData, setCurData] = useState([])
     function addToBasket() {
@@ -24,10 +26,10 @@ function ProdInfo({ price, brandName, displayName, rating, reviews }) {
       prevCart = JSON.parse(prevCart)
       console.log(prevCart)
       if(prevCart){
-        localStorage.setItem("Scart",JSON.stringify([...prevCart, {price, brandName, displayName, rating, reviews}]))
+        localStorage.setItem("Scart",JSON.stringify([...prevCart, {price, brandName, displayName, rating, reviews,heroImage}]))
       }
       else{
-        localStorage.setItem("Scart",JSON.stringify([{price, brandName, displayName, rating, reviews}]))
+        localStorage.setItem("Scart",JSON.stringify([{price, brandName, displayName, rating, reviews, heroImage}]))
       }
       n("/one")
     
