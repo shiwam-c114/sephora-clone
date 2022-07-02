@@ -23,13 +23,13 @@ export default function Basket(){
 <Box mt='100px' ml='10%'>
 
 <Heading>
-My basket
+My Basket
 </Heading>
 <Flex>
     <Box w='65%'>
 <Box border={'4px'} w='95%'  borderColor={'blackAlpha.400'}>
 <Text  fontWeight={600} backgroundColor={'blackAlpha.400'}>
-    Git it shiped({No_item})
+    Get it shipped({No_item})
 </Text>
 <HStack>
 
