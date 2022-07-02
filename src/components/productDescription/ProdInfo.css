@@ -78,3 +78,17 @@
   padding-right: 68%;
   padding-left: 2%;
 }
+.radioButtonInfo2{
+    padding-right: 68%;
+    padding-left: 2%;
+}
+.cartFlex{
+    display: flex;
+    padding-top: 5%;
+}
+.cartNumberBtn{
+    
+}
+.addToCartBtn{
+    padding-left: 1%;
+}
