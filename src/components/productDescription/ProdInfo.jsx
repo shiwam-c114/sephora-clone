@@ -1,6 +1,7 @@
 import "./ProdInfo.css";
 import StarRatings from "react-star-ratings";
 import React, { useEffect, useState } from "react";
+import {useNavigate} from "react-router-dom";
 import "./ProdInfo.css";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { Radio, RadioGroup } from "@chakra-ui/react";
@@ -17,8 +18,10 @@ import {
 
 
 function ProdInfo({ price, brandName, displayName, rating, reviews }) {
+    const n=useNavigate();
     const [prevData, setprevData] = useState([]);
     const [curData, setCurData] = useState([])
+    
     function addToBasket() {
       let prevCart = localStorage.getItem("Scart")
       prevCart = JSON.parse(prevCart)
@@ -29,7 +32,7 @@ function ProdInfo({ price, brandName, displayName, rating, reviews }) {
       else{
         localStorage.setItem("Scart",JSON.stringify([{price, brandName, displayName, rating, reviews}]))
       }
-      n("/one")
+      
     
       }
 
