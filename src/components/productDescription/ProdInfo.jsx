@@ -4,35 +4,58 @@ import React, { useEffect, useState } from "react";
 import "./ProdInfo.css";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { Radio, RadioGroup } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 function ProdInfo({ price, brandName, displayName, rating, reviews }) {
-  const [prevData, setprevData] = useState([]);
-  const [curData, setCurData] = useState([]);
-  function addToBasket() {
-    fetch(`http://localhost:8080/userData/2`)
-      .then((res) => res.json())
-      .then((daTa) => {
-        // setprevData([])
-        console.log(daTa.cart, "cart");
-        // console.log(...data.cart);
-        setprevData(daTa.cart);
-        console.log(prevData, "updatd prevData");
-      });
-    setCurData([{ price, brandName, displayName, rating, reviews }]);
+  // const [prevData, setprevData] = useState([]);
+  // const [curData, setCurData] = useState([]);
+  const n = useNavigate();
+
+  // function addToBasket() {
+  //   fetch(`http://localhost:8080/userData/2`)
+  //     .then((res) => res.json())
+  //     .then((daTa) => {
+  //       // setprevData([])
+  //       console.log(daTa.cart, "cart");
+  //       // console.log(...data.cart);
+  //       setprevData(daTa.cart);
+  //       console.log(prevData, "updatd prevData");
+  //     });
+  //   setCurData([{ price, brandName, displayName, rating, reviews }]);
+  // }
+  // useEffect(() => {
+  //   fetch("http://localhost:8080/userData/2", {
+  //     method: "PATCH",
+  //     body: JSON.stringify({
+  //       cart: [...prevData, ...curData],
+  //     }),
+  //     headers: {
+  //       "Content-type": "application/json; charset=UTF-8",
+  //     },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((json) => {console.log(json, "cart updated", json.cart.length)
+  //     if (json.cart.length > 0) {
+  //       n("/one")
+  //     }
+  //   });
+      
+  
+  // }, [prevData]);
+
+function addToBasket() {
+  let prevCart = localStorage.getItem("Scart")
+  prevCart = JSON.parse(prevCart)
+  console.log(prevCart)
+  if(prevCart){
+    localStorage.setItem("Scart",JSON.stringify([...prevCart, {price, brandName, displayName, rating, reviews}]))
   }
-  useEffect(() => {
-    fetch("http://localhost:8080/userData/2", {
-      method: "PATCH",
-      body: JSON.stringify({
-        cart: [...prevData, ...curData],
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then((json) => console.log(json, "cart updated", json.cart.length));
-  }, [prevData]);
+  else{
+    localStorage.setItem("Scart",JSON.stringify([{price, brandName, displayName, rating, reviews}]))
+  }
+  n("/one")
+
+  }
 
   const [value, setValue] = React.useState("1");
   return (

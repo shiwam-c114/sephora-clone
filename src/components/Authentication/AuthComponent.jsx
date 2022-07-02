@@ -75,6 +75,7 @@ export const AuthComponent = () => {
       month: "",
       day: "",
       zipcode: "",
+      cart:[]
     });
   };
   const handleSignin = async (e) => {
