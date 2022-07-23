@@ -44,7 +44,7 @@ function MainCarousal({ ToShow }) {
 
       {ToShow.map((item) => (
         <>
-          <Img p="5px" w="50%" borderRadius="4px" src={item.img}></Img>
+          <Img p="5px" w="50%" borderRadius="10px" src={item.img}></Img>
         </>
       ))}
 

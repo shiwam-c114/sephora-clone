@@ -14,7 +14,7 @@ import Description from './pages/Description';
 import One,{Two} from './components/checkout/checkout'
 import Pay from './components/payment/payment'
 import Basket from './components/basket/basket';
-import Footer from "./components/homePage/Footer/Footer";
+import Footer from "./components/HomePage/Footer/Footer";
 
 
 
