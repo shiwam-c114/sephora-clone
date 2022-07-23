@@ -1,6 +1,7 @@
 import "./ProdInfo.css";
 import StarRatings from "react-star-ratings";
 import React, { useEffect, useState } from "react";
+import {useNavigate} from "react-router-dom";
 import "./ProdInfo.css";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { Radio, RadioGroup } from "@chakra-ui/react";
@@ -14,13 +15,14 @@ import {
     MenuOptionGroup,
     MenuDivider,
 } from '@chakra-ui/react'
-import { useNavigate } from "react-router-dom";
+
 
 
 function ProdInfo({ price, brandName, displayName, rating, reviews, heroImage }) {
     const n = useNavigate()
     const [prevData, setprevData] = useState([]);
     const [curData, setCurData] = useState([])
+    
     function addToBasket() {
       let prevCart = localStorage.getItem("Scart")
       prevCart = JSON.parse(prevCart)

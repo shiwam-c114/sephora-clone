@@ -13094,6 +13094,17 @@
       "zipcode": "686515",
       "id": 2,
       "cart": []
+    },
+    {
+      "first": "Abrar",
+      "last": "Hyder",
+      "email": "abrar@gmail.com",
+      "password": "123456",
+      "phone": "96325874",
+      "month": "oct",
+      "day": "16",
+      "zipcode": "686515",
+      "id": 3
     }
   ]
 }
