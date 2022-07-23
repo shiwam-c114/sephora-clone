@@ -12,7 +12,7 @@ export const ProductList = ({ title }) => {
   const [data, setData] = React.useState([]);
 
   const getData = () => {
-    fetch(`http://localhost:8080/${title}`)
+    fetch(`https://sephora-clone-data.herokuapp.com/${title}`)
       .then((res) => res.json())
       .then((res) => {
         setData(res);

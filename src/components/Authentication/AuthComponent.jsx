@@ -62,7 +62,7 @@ export const AuthComponent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    fetch(`http://localhost:8080/userData`, {
+    fetch(`https://sephora-clone-data.herokuapp.com/userData`, {
       method: "POST",
       body: JSON.stringify(formData),
       headers: { "Content-type": "Application/json" },
@@ -82,7 +82,7 @@ export const AuthComponent = () => {
   const handleSignin = async (e) => {
     e.preventDefault();
     console.log("isauth in singing", isAuth);
-    await fetch(`http://localhost:8080/userData`)
+    await fetch(`https://sephora-clone-data.herokuapp.com/userData`)
       .then((res) => res.json())
       .then((res) => {
         let temp = false;

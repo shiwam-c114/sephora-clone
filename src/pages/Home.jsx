@@ -38,12 +38,12 @@ function Home() {
     },
   ]);
   function getData() {
-    fetch(`http://localhost:8080/makeup`)
+    fetch(`https://sephora-clone-data.herokuapp.com/makeup`)
       .then((res) => res.json())
       .then((data) => {
         setFirst(data);
       });
-    fetch(`http://localhost:8080/hair`)
+    fetch(`https://sephora-clone-data.herokuapp.com/hair`)
       .then((res) => res.json())
       .then((data) => {
         setSecond(data);
